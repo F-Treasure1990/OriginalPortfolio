@@ -1,19 +1,17 @@
-
 export const palette = {
   palette: {
     main: "#44475a",
     secondary: "#282A36",
     accent: "#BD93F9",
     textFocused: "#F8F8F2",
-    text: '#f8f8f299',
-    highlight: "#FF79C6",
+    text: "#f8f8f299",
+    highlight: "#FF79C6"
   },
   mediaQ: {
     down,
     up,
-    customDown: (breakpoint) => `@media screen and (max-width: ${ breakpoint - 1 }px)`,
-    customUp: (breakpoint) => `@media screen and (min-width: ${ breakpoint }px)`,
-
+    customDown: breakpoint => `@media screen and (max-width: ${breakpoint - 1}px)`,
+    customUp: breakpoint => `@media screen and (min-width: ${breakpoint}px)`
   },
   breakpoints: {
     xs: 0,
@@ -38,16 +36,13 @@ export const palette = {
       fontWeight: 400
     }
   }
-}
-
-
+};
 
 function down(breakpoint) {
-  return `@media screen and (max-width: ${ palette?.breakpoints?.[breakpoint] - 1 }px)`
+  return `@media screen and (max-width: ${palette?.breakpoints?.[breakpoint] - 1}px)`;
 }
 function up(breakpoint) {
-  return `@media screen and (min-width: ${ palette?.breakpoints?.[breakpoint] }px)`
+  return `@media screen and (min-width: ${palette?.breakpoints?.[breakpoint]}px)`;
 }
-
 
 // `@media screen and (max-width: ${ breakpoint - 1 }px)`

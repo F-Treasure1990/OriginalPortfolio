@@ -24,7 +24,7 @@ html, body {
 }
 
 html {
-  background-color: ${ ({ theme }) => theme?.palette?.secondary };
+  background-color: ${({ theme }) => theme?.palette?.secondary};
 
 }
 /*
@@ -39,6 +39,14 @@ body {
   max-width: 1048px;
   margin: 0 auto;
   padding: 24px;
+  transition: all ease 0.3s;
+  position: relative;
+  ${({ theme }) => theme?.mediaQ.customDown(500)} {
+   padding:12px ;
+ }
+ ${({ theme }) => theme?.mediaQ.customDown(450)} {
+  padding:0px ;
+}
 }
 /*
   6. Improve media defaults

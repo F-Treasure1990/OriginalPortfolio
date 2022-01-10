@@ -1,5 +1,8 @@
-import TopNavbar from "../Components/TopNavbar/TopNav";
-
+import MainNavbar from "../Components/MainNavbar/MainNavbar";
 export default function Home() {
-  return <TopNavbar />;
+  return (
+    <>
+      <MainNavbar />
+    </>
+  );
 }
