@@ -26,9 +26,9 @@ export const Box = styled.div`
   border-radius: 6px;
 `;
 
-export const Text = styled.div`
+export const Text = styled.p`
   color: ${({ theme, color }) => theme?.palette?.[color] ?? "red"};
-  font-size: ${({ theme, font }) => theme?.typography?.[font]?.fontSize ?? "16"}px;
+  /* font-size: ${({ theme, font }) => theme?.typography?.[font]?.fontSize ?? "16"}px; */
   font-weight: ${({ theme, font }) => theme?.typography?.[font]?.fontWeight ?? "400"};
   transition: all ease 0.3s;
 `;

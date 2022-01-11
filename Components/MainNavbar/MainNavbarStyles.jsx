@@ -29,7 +29,7 @@ export const Message_Button = styled(Button)`
   height: 40px;
   overflow: hidden;
   margin-right: 12px;
-
+  font-size: 14px;
   transition: all 0.5s ease-out;
   ${({ theme }) => theme?.mediaQ.customDown(450)} {
     margin-right: -6ch;
