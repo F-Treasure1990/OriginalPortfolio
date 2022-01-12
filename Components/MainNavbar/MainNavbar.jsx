@@ -2,11 +2,13 @@ import { Text } from "../../styles/GlobalStyles";
 import Logo from "/icons/Logo";
 import { Container, Message_Button } from "./MainNavbarStyles";
 import NavOptions from "./NavOptions/NavOptions";
+import { useTheme } from "styled-components";
 
 const MainNavbar = () => {
+  const { palette } = useTheme();
   return (
     <Container h="64px" w="100%" percent>
-      <Logo size="26" className="topnav_logo" />
+      <Logo size="26" className="topnav_logo" color={palette?.textFocused} />
       <NavOptions />
       <Message_Button solid>
         <img className="icon" src="message.png" alt="Message Icon" />
