@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { Box, Button } from "/styles/GlobalStyles";
+import { Box } from "/styles/GlobalStyles";
 
 export const Container = styled(Box)`
   margin-top: 150px;
   padding: clamp(0.75rem, -1rem + 4vw, 1.5rem);
-  display: flex;
   position: relative;
 `;
 
@@ -27,14 +26,16 @@ export const EmptyContainer = styled.div`
     display: none;
   }
 `;
-export const MsgButton = styled(Button)`
-  position: absolute;
-  padding: 1.2% 2.4%;
-  border-radius: clamp(0.38rem, 0.08rem + 0.67vw, 0.5rem);
-  font-size: clamp(0.75rem, 0.17rem + 1.33vw, 1rem);
-  height: 44px;
 
-  & > div {
-    transition: all ease;
-  }
+export const MiddleSectionContainer = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+`;
+
+export const BottomSectionContainer = styled.section`
+  font-size: clamp(0.88rem, 0.77rem + 0.53vw, 1rem);
+  padding: 0 clamp(0.5rem, -0.97rem + 7.37vw, 2.25rem);
 `;

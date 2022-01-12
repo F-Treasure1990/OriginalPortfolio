@@ -5,7 +5,7 @@ import NavOptions from "./NavOptions/NavOptions";
 
 const MainNavbar = () => {
   return (
-    <Container h="64" w="100" percent>
+    <Container h="64px" w="100%" percent>
       <Logo size="26" className="topnav_logo" />
       <NavOptions />
       <Message_Button solid>

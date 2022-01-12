@@ -10,7 +10,8 @@ export const Container = styled(Box)`
   ${({ theme }) => theme?.mediaQ.customDown(450)} {
     position: absolute;
     bottom: 0;
-    border-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   // LOGO

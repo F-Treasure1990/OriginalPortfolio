@@ -18,8 +18,8 @@ export const Button = styled.button`
 `;
 
 export const Box = styled.div`
-  height: ${({ h }) => h}px;
-  width: ${({ w }) => w ?? 100}${({ percent }) => (percent ? "%" : "px")};
+  height: ${({ h }) => h};
+  width: ${({ w }) => w};
   border-radius: ${({ rad }) => rad ?? 6}px;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.16);
   background-color: ${({ theme }) => theme?.palette?.main};
@@ -30,7 +30,6 @@ export const Text = styled.p`
   color: ${({ theme, color }) => theme?.palette?.[color] ?? "red"};
   /* font-size: ${({ theme, font }) => theme?.typography?.[font]?.fontSize ?? "16"}px; */
   font-weight: ${({ theme, font }) => theme?.typography?.[font]?.fontWeight ?? "400"};
-  transition: all ease 0.3s;
 `;
 export const TextPara = styled.p`
   color: ${({ theme, color }) => theme?.palette?.[color] ?? "red"};
