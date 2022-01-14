@@ -38,4 +38,5 @@ export const MiddleSectionContainer = styled.section`
 export const BottomSectionContainer = styled.section`
   font-size: clamp(0.88rem, 0.77rem + 0.53vw, 1rem);
   padding: 0 clamp(0.5rem, -0.97rem + 7.37vw, 2.25rem);
+  height: auto;
 `;

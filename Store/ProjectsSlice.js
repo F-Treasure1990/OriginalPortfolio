@@ -1,10 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  value: 10
-};
-
-export const counterSlice = createSlice({
+const initialState = [
+  {
+    title: "build a spotify connected app",
+    postDate: "8 Aug 21",
+    img: "projectimage.png",
+    stack: ["react", "express", "spotify Api", "styled components"],
+    description: "Having struggled with understanding how the Spotify OAuth flow works, I made the course I wish I could have had. more junk text that no one will read. just need to fill the box",
+    githubLink: "link here"
+  }
+];
+export const projectsSlice = createSlice({
   name: "counter",
   initialState,
   reducers: {
@@ -25,6 +31,6 @@ export const counterSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+export const { increment, decrement, incrementByAmount } = projectsSlice.actions;
 
-export default counterSlice.reducer;
+export default projectsSlice.reducer;

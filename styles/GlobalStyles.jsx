@@ -29,10 +29,58 @@ export const Box = styled.div`
 export const Text = styled.p`
   color: ${({ theme, color }) => theme?.palette?.[color] ?? "red"};
   /* font-size: ${({ theme, font }) => theme?.typography?.[font]?.fontSize ?? "16"}px; */
-  font-weight: ${({ theme, font }) => theme?.typography?.[font]?.fontWeight ?? "400"};
+  /* font-weight: ${({ theme, font }) => theme?.typography?.[font]?.fontWeight ?? "400"}; */
 `;
 export const TextPara = styled.p`
   color: ${({ theme, color }) => theme?.palette?.[color] ?? "red"};
   font-size: ${({ theme, font }) => theme?.typography?.[font]?.fontSize ?? "16"}px;
   font-weight: ${({ theme, font }) => theme?.typography?.[font]?.fontWeight ?? "400"};
+`;
+
+export const Section_Title = styled(Text)`
+  font-size: clamp(1.5rem, 1.29rem + 1.05vw, 1.75rem);
+  flex-basis: 100%;
+  ${({ theme }) => theme?.mediaQ.customDown(450)} {
+    margin-left: 12px;
+  }
+`;
+
+export const Section_SubTitle = styled(Text)`
+  font-size: clamp(0.88rem, 0.77rem + 0.53vw, 1rem);
+  font-weight: 300;
+  text-transform: capitalize;
+  flex-basis: 100%;
+  ${({ theme }) => theme?.mediaQ.customDown(450)} {
+    margin-left: 12px;
+  }
+`;
+
+export const Section_Divider = styled.div`
+  height: 1px;
+  background-color: ${({ theme }) => theme?.palette?.main};
+  flex-basis: 100%;
+  margin-top: 24px;
+  margin-bottom: 40px;
+  transition: all ease 0.3s;
+  ${({ theme }) => theme?.mediaQ.customDown(450)} {
+    flex-basis: 90%;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+`;
+export const Global_Btn = styled(Button)`
+  width: ${({ w }) => w};
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 6px;
+  margin-top: 24px;
+  transition: all 0.3s ease;
+
+  & > a {
+    text-decoration: none;
+    color: ${({ solid, theme }) => (solid ? theme?.palette?.main : theme?.palette?.accent)};
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
 `;

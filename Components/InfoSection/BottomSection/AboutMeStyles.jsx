@@ -14,11 +14,13 @@ export const Description = styled(motion.div)`
   color: ${({ theme }) => theme?.palette?.textFocused};
   font-weight: 300;
   overflow: hidden;
+
   & > span {
     color: ${({ theme }) => theme?.palette?.accent};
   }
-  ${({ theme }) => theme?.mediaQ.customUp(700)} {
+  ${({ theme }) => theme?.mediaQ.customUp(750)} {
     height: max-content !important;
+    margin-bottom: 12px;
   }
 `;
 
@@ -33,22 +35,7 @@ export const ReadMoreBtn = styled.p`
   margin-top: clamp(1.25rem, 0.41rem + 4.21vw, 2.25rem);
   margin-bottom: 12px;
   cursor: pointer;
-  ${({ theme }) => theme?.mediaQ.customUp(700)} {
+  ${({ theme }) => theme?.mediaQ.customUp(750)} {
     display: none;
-  }
-`;
-
-export const InfoSectionLogoBotom = styled.div`
-  text-align: center;
-  flex-direction: column;
-  ${FlexCenter};
-
-  & > svg {
-    margin-top: clamp(1.25rem, 0.41rem + 4.21vw, 2.25rem);
-    margin-bottom: 12px;
-    position: relative;
-    ${({ theme }) => theme?.mediaQ.customDown(700)} {
-      display: none;
-    }
   }
 `;
