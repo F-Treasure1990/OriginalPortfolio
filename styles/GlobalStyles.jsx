@@ -40,9 +40,17 @@ export const TextPara = styled.p`
 export const Section_Title = styled(Text)`
   font-size: clamp(1.5rem, 1.29rem + 1.05vw, 1.75rem);
   flex-basis: 100%;
+  margin-bottom: 4px;
   ${({ theme }) => theme?.mediaQ.customDown(450)} {
-    margin-left: 12px;
+    margin: 0px 12px 8px 12px;
   }
+`;
+
+export const Archive_Title = styled(Section_Title)`
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-bottom: 4px;
+  text-align: center;
 `;
 
 export const Section_SubTitle = styled(Text)`
@@ -51,16 +59,22 @@ export const Section_SubTitle = styled(Text)`
   text-transform: capitalize;
   flex-basis: 100%;
   ${({ theme }) => theme?.mediaQ.customDown(450)} {
-    margin-left: 12px;
+    margin: 0px 12px;
   }
 `;
 
+export const Archive_SubTitle = styled(Section_Title)`
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 300;
+  text-align: center;
+`;
 export const Section_Divider = styled.div`
   height: 1px;
   background-color: ${({ theme }) => theme?.palette?.main};
   flex-basis: 100%;
-  margin-top: 24px;
-  margin-bottom: 40px;
+  margin-top: clamp(0.75rem, 0.12rem + 3.16vw, 1.5rem);
+  margin-bottom: clamp(1.5rem, 0.66rem + 4.21vw, 2.5rem);
   transition: all ease 0.3s;
   ${({ theme }) => theme?.mediaQ.customDown(450)} {
     flex-basis: 90%;
@@ -68,19 +82,32 @@ export const Section_Divider = styled.div`
     margin-right: 12px;
   }
 `;
-export const Global_Btn = styled(Button)`
-  width: ${({ w }) => w};
-  font-size: 14px;
-  padding: 8px;
-  border-radius: 6px;
-  margin-top: 24px;
-  transition: all 0.3s ease;
+export const Section_SubDivider = styled.div`
+  height: 1px;
+  background-color: ${({ theme }) => theme?.palette?.main};
+  width: 80%;
+  margin: 0 auto;
+  margin-top: clamp(1.88rem, 1.35rem + 2.63vw, 2.5rem);
+  margin-bottom: clamp(1.25rem, 0.72rem + 2.63vw, 1.88rem);
 
-  & > a {
-    text-decoration: none;
-    color: ${({ solid, theme }) => (solid ? theme?.palette?.main : theme?.palette?.accent)};
-    height: 100%;
-    width: 100%;
+  transition: all ease 0.3s;
+`;
+
+export const GithubLinkContainer = styled.a`
+  position: absolute;
+  background-color: ${({ theme }) => theme?.palette?.secondary};
+  padding: 12px 16px;
+  top: 12px;
+  right: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover > svg {
+    fill: ${({ theme }) => theme?.palette?.textFocused};
+  }
+
+  & > svg {
     transition: all 0.3s ease;
+    fill: ${({ theme }) => theme?.palette?.text};
   }
 `;
