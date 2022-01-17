@@ -9,8 +9,7 @@ const Project_Nav = ({ filteredArray }) => {
   const dispatch = useDispatch();
   const { isActive } = useSelector(state => state.ToggleSlice);
   const { palette } = useTheme();
-  console.log(filteredArray.length);
-  console.log(isActive);
+
   return (
     <>
       <Project_NavContainer h="40px">

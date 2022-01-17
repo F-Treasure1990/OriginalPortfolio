@@ -11,7 +11,7 @@ const AboutMe = () => {
   return (
     <>
       <Title color="textFocused">Hi, There 👋🏽 ...</Title>
-      <Description readmore={readMore} variants={v} animate={readMore ? "i" : "a"} initial="i" transition={{ type: "spring" }}>
+      <Description variants={v} animate={readMore ? "i" : "a"} initial="i" transition={{ type: "spring" }}>
         Thank you for taking the time to explore my portfolio. My name is Fenton, and I am a <span>self-taught developer</span> located in the city of Birmingham, England 🏴󠁧󠁢󠁥󠁮󠁧󠁿. Web-development has been my obsession for many years, exploring both front-end and back-end methodologies. I enjoy learning
         and experimenting with code, and I am seeking a working environment that will enable me to further develop my coding and professional skills, paired with opportunities to explore a multitude of different software. 🙏🏽
       </Description>

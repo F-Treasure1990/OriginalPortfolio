@@ -12,4 +12,3 @@ const useQuoteAPI = () => {
 };
 
 export default useQuoteAPI;
-

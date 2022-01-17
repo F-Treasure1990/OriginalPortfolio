@@ -5,7 +5,8 @@ export const Project_CardContainer = styled(Box)`
   overflow: hidden;
   height: auto;
   cursor: pointer;
-  &:hover .Blog_CardImg {
+
+  &:hover .Project_CardImg {
     transform: scale(1.2);
   }
 `;

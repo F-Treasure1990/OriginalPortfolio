@@ -41,12 +41,15 @@ export const Section_Title = styled(Text)`
   font-size: clamp(1.5rem, 1.29rem + 1.05vw, 1.75rem);
   flex-basis: 100%;
   margin-bottom: 4px;
+  text-transform: capitalize;
+  transition: all ease 0.3s;
   ${({ theme }) => theme?.mediaQ.customDown(450)} {
-    margin: 0px 12px 8px 12px;
+    margin-left: 12px;
   }
 `;
 
 export const Archive_Title = styled(Section_Title)`
+  transition: all ease 0.3s;
   font-size: 20px;
   text-transform: capitalize;
   margin-bottom: 4px;
@@ -54,6 +57,7 @@ export const Archive_Title = styled(Section_Title)`
 `;
 
 export const Section_SubTitle = styled(Text)`
+  transition: all ease 0.3s;
   font-size: clamp(0.88rem, 0.77rem + 0.53vw, 1rem);
   font-weight: 300;
   text-transform: capitalize;
