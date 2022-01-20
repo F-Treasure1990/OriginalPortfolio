@@ -10,8 +10,8 @@ const BlogIcon = ({ d, c }) => {
           transform="translate(1270.566 494.783)"
           fill="none"
           stroke={c}
-          stroke-miterlimit="10"
-          stroke-width="2.5"
+          strokeMiterlimit="10"
+          strokeWidth="2.5"
         />
       </g>
     </svg>

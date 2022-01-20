@@ -18,9 +18,12 @@ export const Blog_CardContainer = styled(Box)`
 export const Blog_CardImg = styled.img`
   min-width: 240px;
   object-fit: cover;
+
   opacity: 0.6;
-  /* height: auto; */
   transition: all ease 0.3s;
+  ${({ theme }) => theme?.mediaQ.customDown(700)} {
+    min-width: 200px;
+  }
   ${({ theme }) => theme?.mediaQ.customDown(500)} {
     height: 120px;
   }

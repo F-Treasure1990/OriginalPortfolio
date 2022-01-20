@@ -1,0 +1,22 @@
+{
+  "frontendTools": [
+    {
+      "software": "javascript",
+      "confidence": 95,
+      "description": "JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/javascript"
+    },
+    {
+      "software": "reactJs",
+      "confidence": 85,
+      "description": "React is a declarative, efficient, and flexible JavaScript library for building user interfaces.",
+      "url": "https://reactjs.org/"
+    },
+    {
+      "software": "tailwind CSS",
+      "confidence": 60,
+      "description": "A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.",
+      "url": "https://tailwindcss.com/"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "designTools": [
+    {
+      "software": "adobeXD",
+      "confidence": 75,
+      "description": "Adobe XD is a vector-based user experience design tool for web apps and mobile apps, developed and published by Adobe Inc.",
+      "url": "https://www.adobe.com/uk/products/xd.html"
+    },
+    {
+      "software": "notion",
+      "confidence": 90,
+      "description": "Notion is a notetaking software and project management software that is used for note-taking, task management, project management, knowledge management, and personal knowledge management. ",
+      "url": "https://www.notion.so/product"
+    },
+    {
+      "software": "illustrator",
+      "confidence": 85,
+      "description": "Adobe Illustrator is a vector graphics editor and design program developed and marketed by Adobe Inc.",
+      "url": "https://www.adobe.com/uk/products/illustrator.html"
+    }
+  ]
+}
