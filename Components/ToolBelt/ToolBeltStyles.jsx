@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Box } from "../../styles/GlobalStyles";
 
@@ -25,13 +26,16 @@ export const ToolBelt_CategoriesContainer = styled.div`
 `;
 
 export const ToolBelt_OptionsContainer = styled(Box)`
-  display: flex;
+  /* display: flex; */
   padding: clamp(0.75rem, 0.12rem + 3.16vw, 1.5rem);
-  display: grid;
-  gap: 16px;
   margin: 0 auto;
   width: 90%;
   transition: all ease 0.5s;
+  overflow: hidden;
+  > div {
+    display: grid;
+    gap: 16px;
+  }
   ${({ theme }) => theme?.mediaQ.customDown(600)} {
     width: 100%;
   }

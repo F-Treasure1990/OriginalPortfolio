@@ -5,10 +5,11 @@ import { BottomSectionContainer, Container, EmptyContainer, MiddleSectionContain
 import SocialMediaIcons from "./TopSection/SocialMediaIcons/SocialMediaIcons";
 import Credentials from "./MiddleSection/Credientials/Credentials";
 import AboutMe from "./BottomSection/AboutMe";
+import { motion } from "framer-motion";
 
 const InfoSection = () => {
   return (
-    <Container width="100%" percent>
+    <Container>
       <MsgButton solid>
         <Text color="secondary">message</Text>
       </MsgButton>
@@ -16,6 +17,7 @@ const InfoSection = () => {
       <TopSectionContainer>
         {/* Empty container to keep avatar centered within infobox */}
         <EmptyContainer />
+
         <AvatarDP />
         <SocialMediaIcons />
       </TopSectionContainer>

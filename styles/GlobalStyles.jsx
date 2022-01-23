@@ -1,5 +1,11 @@
 import styled, { css } from "styled-components";
 
+export const HomepageContainer = styled.div`
+  display: grid;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
 export const FlexCenter = css`
   display: flex;
   justify-content: center;
@@ -80,6 +86,7 @@ export const Section_Divider = styled.div`
   margin-top: clamp(0.75rem, 0.12rem + 3.16vw, 1.5rem);
   margin-bottom: clamp(1.5rem, 0.66rem + 4.21vw, 2.5rem);
   transition: all ease 0.3s;
+
   ${({ theme }) => theme?.mediaQ.customDown(450)} {
     flex-basis: 90%;
     margin-left: 12px;
@@ -113,5 +120,32 @@ export const GithubLinkContainer = styled.a`
   & > svg {
     transition: all 0.3s ease;
     fill: ${({ theme }) => theme?.palette?.text};
+  }
+`;
+
+export const CopyrightStyles = styled.div`
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 0.5;
+  padding: 6px 12px;
+  background-color: ${({ theme }) => theme?.palette?.secondary};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 24px;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > img {
+      height: 16px;
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+    }
   }
 `;

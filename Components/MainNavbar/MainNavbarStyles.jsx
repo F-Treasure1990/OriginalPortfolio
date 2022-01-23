@@ -7,11 +7,13 @@ export const Container = styled(Box)`
   justify-content: space-between;
   overflow: hidden;
   transition: all 0.5s ease-out;
+  z-index: 1000;
   ${({ theme }) => theme?.mediaQ.customDown(450)} {
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+
+    outline: 10px solid ${({ theme }) => theme?.palette?.secondary};
+    border-radius: 0;
   }
 
   // LOGO

@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Text } from "../../../styles/GlobalStyles";
 
-export const ToolBelt_OptionContainer = styled.div`
+export const ToolBelt_OptionContainer = styled(motion.div)`
   display: flex;
   width: 100%;
   &:not(:last-child) {
@@ -71,4 +72,8 @@ export const ToolBelt_OptionConfidenceBar = styled.div`
   & .confidenceBarPercentage {
     background-color: ${({ theme }) => theme?.palette?.accent};
   }
+`;
+
+export const ToolBelt_OptionPercentage = styled(motion.div)`
+  color: ${({ theme }) => theme?.palette?.accent};
 `;

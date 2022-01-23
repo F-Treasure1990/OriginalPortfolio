@@ -9,11 +9,13 @@ const Projects_Archive = () => {
   return (
     <>
       <Section_SubDivider />
-      <Projects_ArchiveContainer>
-        <Archive_Title color="textFocused">archive</Archive_Title>
-        <Archive_SubTitle color="accent">A Collection of noteworthy projects</Archive_SubTitle>
-        <Archive_ProjectsContainer>{cards && cards.map((c, i) => <Projects_ArchiveCard card={c} key={`${i}-card`} />)}</Archive_ProjectsContainer>
-      </Projects_ArchiveContainer>
+      <Archive_Title color="textFocused">archive</Archive_Title>
+      <Archive_SubTitle color="accent">A Collection of noteworthy projects</Archive_SubTitle>
+      <Archive_ProjectsContainer>
+        {cards.map((c, i) => (
+          <Projects_ArchiveCard card={c} key={`${i}-card`} />
+        ))}
+      </Archive_ProjectsContainer>
     </>
   );
 };

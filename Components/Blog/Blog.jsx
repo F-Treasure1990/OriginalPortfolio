@@ -10,7 +10,7 @@ const Blog = () => {
       <Section_SubTitle color="accent">Skills & Experience with an array of softwares </Section_SubTitle>
       <Section_Divider />
       <Blog_CardsContainer>
-        {blogs.map((b, i) => (
+        {blogs.slice(0, 3).map((b, i) => (
           <Blog_Card blog={b} key={`blog-${i}`} />
         ))}
       </Blog_CardsContainer>

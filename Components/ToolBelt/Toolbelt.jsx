@@ -6,6 +6,17 @@ import ToolBelt_Option from "./ToolBelt_Option/ToolBelt_Option";
 import frontend from "/Data/Toolbelt/front-end.json";
 import backend from "/Data/Toolbelt/back-end.json";
 import design from "/Data/Toolbelt/utilities";
+import { motion } from "framer-motion";
+
+const v = {
+  hidden: { opacity: 1 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
 
 const Toolbelt = () => {
   const { frontendTools } = frontend;
@@ -32,9 +43,11 @@ const Toolbelt = () => {
       </ToolBelt_CategoriesContainer>
       {/* Options */}
       <ToolBelt_OptionsContainer>
-        {toolkitOption.category.map((t, i) => (
-          <ToolBelt_Option tool={t} key={`${t}-${i}`} />
-        ))}
+        <motion.div variants={v} animate="show" initial="hidden">
+          {toolkitOption.category.map((t, i) => (
+            <ToolBelt_Option tool={t} key={`${t}-${i}`} />
+          ))}
+        </motion.div>
       </ToolBelt_OptionsContainer>
     </ToolBelt_Container>
   );

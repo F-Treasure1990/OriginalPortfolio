@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
 import { Text } from "../../../styles/GlobalStyles";
+import { ToolBelt_OptionConfidenceBar, ToolBelt_OptionContainer, ToolBelt_OptionImgContainer, ToolBelt_OptionPercentage, ToolBelt_OptionRightSideContainer, ToolBelt_OptionTitle } from "./ToolBelt_OptionStyles";
 
-import PercentageNumber from "./PercentageNumber/PercentageNumber";
-import { ToolBelt_OptionConfidenceBar, ToolBelt_OptionContainer, ToolBelt_OptionImgContainer, ToolBelt_OptionRightSideContainer, ToolBelt_OptionTitle } from "./ToolBelt_OptionStyles";
-
+const v = {
+  hidden: { x: "-120%" },
+  show: { x: 0, transition: { type: "spring", bounce: 0.2 } }
+};
 const ToolBelt_Option = ({ tool }) => {
   return (
-    <ToolBelt_OptionContainer>
+    <ToolBelt_OptionContainer variants={v}>
       <ToolBelt_OptionImgContainer>
         <img src={`Toolbelt/${tool?.software.replace(/ /g, "-")}-logo.png`} alt="react-logo" />
       </ToolBelt_OptionImgContainer>
@@ -19,7 +21,9 @@ const ToolBelt_Option = ({ tool }) => {
             <motion.div initial={{ width: "0" }} animate={{ width: `${tool?.confidence}%` }} transition={{ type: "spring", duration: 1.5 }} className="confidenceBarPercentage" />
           </ToolBelt_OptionConfidenceBar>
           <ToolBelt_OptionImgContainer>
-            <PercentageNumber from={0} to={tool?.confidence} />
+            <ToolBelt_OptionPercentage initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              {tool?.confidence}
+            </ToolBelt_OptionPercentage>
           </ToolBelt_OptionImgContainer>
         </div>
 

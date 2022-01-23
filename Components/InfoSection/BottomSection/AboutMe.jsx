@@ -8,6 +8,7 @@ const AboutMe = () => {
     i: { height: "auto" },
     a: { height: "10ch" }
   };
+
   return (
     <>
       <Title color="textFocused">Hi, There 👋🏽 ...</Title>

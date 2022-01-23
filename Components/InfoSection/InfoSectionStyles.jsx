@@ -2,9 +2,14 @@ import styled from "styled-components";
 import { Box } from "/styles/GlobalStyles";
 
 export const Container = styled(Box)`
-  margin-top: 150px;
+  margin-top: 40px;
   padding: clamp(0.75rem, -1rem + 4vw, 1.5rem);
   position: relative;
+  width: auto;
+  ${({ theme }) => theme?.mediaQ.customDown(450)} {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
 `;
 
 export const TopSectionContainer = styled.section`

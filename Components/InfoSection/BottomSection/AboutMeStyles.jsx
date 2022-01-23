@@ -13,7 +13,9 @@ export const Title = styled(Text)`
 export const Description = styled(motion.div)`
   color: ${({ theme }) => theme?.palette?.textFocused};
   font-weight: 300;
+  transition: all ease;
   overflow: hidden;
+  text-overflow: ellipsis;
 
   & > span {
     color: ${({ theme }) => theme?.palette?.accent};
@@ -39,3 +41,7 @@ export const ReadMoreBtn = styled.p`
     display: none;
   }
 `;
+// display: -webkit-box;
+//   -webkit-line-clamp: 3;
+//   overflow: hidden;
+//   -webkit-box-orient: vertical;

@@ -1,11 +1,15 @@
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
+import { useRouter } from "next/router";
+
 import { useState } from "react";
 import { NavOptionContainer, NavOptionsContainer, NavOptionAnimation, NavOption } from "./NavOptionsStyles";
 import { Text } from "/styles/GlobalStyles";
 
 const NavOptions = () => {
+  const router = useRouter();
   const NavOptions = ["home", "projects", "toolbelt", "blog", "resources"];
-  const [clicked, setClicked] = useState("home");
+  const [clicked, setClicked] = useState(router.route === "/" ? "home" : router.pathname.replace(/[^a-zA-Z ]/g, ""));
 
   //Framer variants
   const varants = {
@@ -17,21 +21,23 @@ const NavOptions = () => {
   return (
     <NavOptionsContainer>
       {NavOptions.map((option, index) => (
-        <NavOptionContainer key={`${option}-${index}`} onClick={() => setClicked(option)} clicked={clicked === option}>
-          <NavOption href="#">
-            <img className="navOption_icon" src={`${option}.svg`} alt={`${option} image`} />
-            <Text className="navOptionText" color={clicked === option ? "textFocused" : "text"} font="subtitle1">
-              {option}
-            </Text>
-            <AnimatePresence>
-              {clicked === option && (
-                <NavOptionAnimation>
-                  <motion.div className="animation" variants={varants} animate={clicked === option && "active"} initial="initial" exit="exit" />
-                </NavOptionAnimation>
-              )}
-            </AnimatePresence>
-          </NavOption>
-        </NavOptionContainer>
+        <Link href={option === "home" ? "/" : `/${option}`} scroll={false} key={`${option}-${index}`}>
+          <NavOptionContainer key={`${option}-${index}`} onClick={() => setClicked(option)} clicked={clicked === option}>
+            <NavOption>
+              <img className="navOption_icon" src={`${option}.svg`} alt={`${option} image`} />
+              <Text className="navOptionText" color={clicked === option ? "textFocused" : "text"} font="subtitle1">
+                {option}
+              </Text>
+              <AnimatePresence>
+                {clicked === option && (
+                  <NavOptionAnimation>
+                    <motion.div className="animation" variants={varants} animate={clicked === option && "active"} initial="initial" exit="exit" />
+                  </NavOptionAnimation>
+                )}
+              </AnimatePresence>
+            </NavOption>
+          </NavOptionContainer>
+        </Link>
       ))}
     </NavOptionsContainer>
   );
