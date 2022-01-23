@@ -6,7 +6,6 @@ import { Quote, QuoteContainer } from "./QuoteSectionStyles";
 
 const QuoteSection = () => {
   const { data, isSuccess, isLoading } = useQuoteAPI();
-  console.log(isLoading);
   return (
     <QuoteContainer>
       <Quote>

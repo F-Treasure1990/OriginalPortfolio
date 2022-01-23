@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Project_CardTopContainer = styled.section`
   overflow: hidden;
-  position: relative;
-  height: clamp(6.25rem, 5.2rem + 5.26vw, 7.5rem);
+  /* position: relative; */
+  height: clamp(11.25rem, 10.2rem + 5.26vw, 12.5rem);
 `;
 
 export const Project_CardImg = styled.img`
@@ -12,4 +12,5 @@ export const Project_CardImg = styled.img`
   opacity: 0.8;
   transition: all ease 0.5s;
   object-fit: cover;
+  object-position: top;
 `;
