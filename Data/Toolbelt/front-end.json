@@ -1,13 +1,13 @@
 {
   "frontendTools": [
     {
-      "software": "javascript",
+      "software": "javaScript",
       "confidence": 95,
       "description": "JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.",
       "url": "https://developer.mozilla.org/en-US/docs/Web/javascript"
     },
     {
-      "software": "reactJs",
+      "software": "reactJS",
       "confidence": 85,
       "description": "React is a declarative, efficient, and flexible JavaScript library for building user interfaces.",
       "url": "https://reactjs.org/"

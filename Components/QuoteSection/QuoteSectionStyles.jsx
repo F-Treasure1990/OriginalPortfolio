@@ -1,28 +1,37 @@
 import styled from "styled-components";
+import { FlexCenter } from "../../styles/GlobalStyles";
 
 export const QuoteContainer = styled.section`
   border-radius: 12px;
-  margin: 50px 0;
-  min-height: 200px;
+  margin: 40px 0;
+  user-select: none;
+  background-image: url("landingBackground.svg");
+  /* padding: 12px; */
+  cursor: pointer;
+  ${FlexCenter}
+  flex-direction: column;
+  height: 200px;
+  max-height: 200px;
 `;
 
 export const Quote = styled.div`
-  background-image: url("landingBackground.svg");
-  width: auto;
-  min-height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display: block;
   letter-spacing: 1px;
-  padding: 12px;
   text-align: center;
+  margin: 0 12px;
 
   > .author {
-  }
-  > .quote {
+    font-size: clamp(0.88rem, 0.83rem + 0.24vw, 1rem);
+    color: ${({ theme }) => theme?.palette?.text};
     font-weight: 300;
-    font-size: clamp(1rem, 0.58rem + 2.11vw, 1.5rem);
-    margin-top: 12px;
+    margin-top: 10px;
+  }
+
+  > .quote {
+    color: ${({ theme }) => theme?.palette?.textFocused};
+    font-weight: 300;
+    font-size: clamp(1rem, 0.85rem + 0.73vw, 1.38rem);
+    line-height: 30px;
+    min-height: 60px;
   }
 `;

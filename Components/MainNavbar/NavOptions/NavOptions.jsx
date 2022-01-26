@@ -21,7 +21,7 @@ const NavOptions = () => {
   return (
     <NavOptionsContainer>
       {NavOptions.map((option, index) => (
-        <Link href={option === "home" ? "/" : `/${option}`} scroll={false} key={`${option}-${index}`}>
+        <Link href={option === "home" ? "/" : `/${option}`} key={`${option}-${index}`}>
           <NavOptionContainer key={`${option}-${index}`} onClick={() => setClicked(option)} clicked={clicked === option}>
             <NavOption>
               <img className="navOption_icon" src={`${option}.svg`} alt={`${option} image`} />

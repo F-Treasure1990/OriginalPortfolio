@@ -19,9 +19,13 @@ export const Container = styled(Box)`
   // LOGO
   & > svg {
     margin-left: max(2.4%, 12px);
-    transition: all 0.5s ease-out;
+    transition: all 0.6s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     ${({ theme }) => theme?.mediaQ.customDown(500)} {
       margin-left: -34px;
+    }
+
+    :hover {
+      transform: rotate(180deg);
     }
   }
 `;

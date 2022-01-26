@@ -25,7 +25,6 @@ html, body {
 
 html {
   background-color: ${({ theme }) => theme?.palette?.secondary};
-
 }
 /*
   Typographic tweaks!
@@ -40,8 +39,7 @@ body {
   margin: 0 auto;
   padding: 24px;
   transition: all ease 0.3s;
-  position: relative;
-  ${({ theme }) => theme?.mediaQ.customDown(500)} {
+   ${({ theme }) => theme?.mediaQ.customDown(500)} {
    padding:12px ;
  }
  ${({ theme }) => theme?.mediaQ.customDown(450)} {

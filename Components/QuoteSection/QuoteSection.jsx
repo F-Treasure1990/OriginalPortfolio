@@ -1,23 +1,32 @@
+import { motion } from "framer-motion";
 import React from "react";
+import { useState } from "react";
+import { useQuery } from "react-query";
 import useQuoteAPI from "../../Hooks/useQuoteAPI";
 import { Text } from "../../styles/GlobalStyles";
 import Loader from "../Loader/loader";
 import { Quote, QuoteContainer } from "./QuoteSectionStyles";
 
+const v = {
+  a: { opacity: 1 },
+  i: { opacity: 0 }
+};
+
 const QuoteSection = () => {
-  const { data, isSuccess, isLoading } = useQuoteAPI();
+  const { data, isSuccess, isLoading, refetch } = useQuoteAPI();
+
   return (
-    <QuoteContainer>
+    <QuoteContainer onClick={() => refetch()}>
       <Quote>
         {isLoading && <Loader />}
         {isSuccess && (
           <>
-            <Text className="author" color="text">
+            <motion.div className="author" variants={v} initial="i" animate="a">
               ~ {data?.author} ~
-            </Text>
-            <Text className="quote" color="textFocused">
+            </motion.div>
+            <motion.div className="quote" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
               "{data?.content.split(".")}"
-            </Text>
+            </motion.div>
           </>
         )}
       </Quote>

@@ -1,5 +1,6 @@
+import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
-
+motion:;
 export const HomepageContainer = styled.div`
   display: grid;
   flex-direction: column;

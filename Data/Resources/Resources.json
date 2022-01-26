@@ -1,0 +1,74 @@
+{
+  "categories": [
+    {
+      "title": "learn web developement",
+      "resources": [
+        {
+          "title": "freeCodeCamp",
+          "description": "Completely free resource for learning not only full-stack web development, but more",
+          "url": "https://www.freecodecamp.org/"
+        },
+        {
+          "title": "Udemy",
+          "description": "Completely free resource for learning not only full-stack web development, but more",
+          "url": "https://www.freecodecamp.org/"
+        },
+        {
+          "title": "youTube",
+          "description": "Completely free resource for learning not only full-stack web development, but more",
+          "url": "https://www.freecodecamp.org/"
+        },
+        {
+          "title": "skillShare",
+          "description": "Completely free resource for learning not only full-stack web development, but more",
+          "url": "https://www.freecodecamp.org/"
+        }
+      ]
+    },
+    {
+      "title": "youTube channels",
+      "resources": [
+        {
+          "title": "Travis Media",
+          "description": "Completely free resource for learning not only full-stack web development, but more",
+          "url": "https://www.freecodecamp.org/"
+        },
+        {
+          "title": "codevolution",
+          "description": "Completely free resource for learning not only full-stack web development, but more",
+          "url": "https://www.freecodecamp.org/"
+        },
+        {
+          "title": "academind",
+          "description": "Completely free resource for learning not only full-stack web development, but more",
+          "url": "https://www.freecodecamp.org/"
+        },
+        {
+          "title": "coder coder",
+          "description": "Completely free resource for learning not only full-stack web development, but more",
+          "url": "https://www.freecodecamp.org/"
+        }
+      ]
+    },
+    {
+      "title": "vectors",
+      "resources": [
+        {
+          "title": "Freepiks",
+          "description": "Completely free resource for learning not only full-stack web development, but more",
+          "url": "https://www.freecodecamp.org/"
+        },
+        {
+          "title": "vecteezy",
+          "description": "Completely free resource for learning not only full-stack web development, but more",
+          "url": "https://www.freecodecamp.org/"
+        },
+        {
+          "title": "rottenVector",
+          "description": "Completely free resource for learning not only full-stack web development, but more",
+          "url": "https://www.freecodecamp.org/"
+        }
+      ]
+    }
+  ]
+}

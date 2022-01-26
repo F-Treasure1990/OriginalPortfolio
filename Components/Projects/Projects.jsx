@@ -13,7 +13,7 @@ const ProjectsSection = () => {
     <>
       <Projects_Container>
         <Section_Title color="textFocused">Projects</Section_Title>
-        <Section_SubTitle color="accent">some thigns i have build</Section_SubTitle>
+        <Section_SubTitle color="accent">somethings i have built</Section_SubTitle>
         <Section_Divider />
         <Projects_CardsContainer>
           <Project_Card card={cards[isActive === 0 ? 0 : isActive + isActive]} />
