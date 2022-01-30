@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Box } from "../../styles/GlobalStyles";
 
 export const ToolBelt_Container = styled.section`
+  margin-bottom: 80px;
   ${({ theme }) => theme?.mediaQ.customDown(450)} {
     margin: 0 12px;
   }

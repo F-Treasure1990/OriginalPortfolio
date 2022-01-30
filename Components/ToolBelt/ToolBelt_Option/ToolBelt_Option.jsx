@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
 import { Text } from "../../../styles/GlobalStyles";
-import { ToolBelt_OptionConfidenceBar, ToolBelt_OptionContainer, ToolBelt_OptionImgContainer, ToolBelt_OptionPercentage, ToolBelt_OptionRightSideContainer, ToolBelt_OptionTitle } from "./ToolBelt_OptionStyles";
+import {
+  ToolBelt_OptionConfidenceBar,
+  ToolBelt_OptionContainer,
+  ToolBelt_OptionImgContainer,
+  ToolBelt_OptionPercentage,
+  ToolBelt_OptionRightSideContainer,
+  ToolBelt_OptionTitle
+} from "./ToolBelt_OptionStyles";
 
 const v = {
   hidden: { x: "-120%" },
@@ -18,7 +25,12 @@ const ToolBelt_Option = ({ tool }) => {
 
         <div className="confidenceBarPercentageCon">
           <ToolBelt_OptionConfidenceBar>
-            <motion.div initial={{ width: "0" }} animate={{ width: `${tool?.confidence}%` }} transition={{ type: "spring", duration: 1.5 }} className="confidenceBarPercentage" />
+            <motion.div
+              initial={{ width: "0" }}
+              animate={{ width: `${tool?.confidence}%` }}
+              transition={{ type: "spring", duration: 1.5, bounce: 0.3 }}
+              className="confidenceBarPercentage"
+            />
           </ToolBelt_OptionConfidenceBar>
           <ToolBelt_OptionImgContainer>
             <ToolBelt_OptionPercentage initial={{ opacity: 0 }} animate={{ opacity: 1 }}>

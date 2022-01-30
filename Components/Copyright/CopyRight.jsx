@@ -1,6 +1,42 @@
 import React from "react";
-import { CopyrightStyles, Text } from "../../styles/GlobalStyles";
+import styled from "styled-components";
+import { Text } from "../../styles/GlobalStyles";
 
+const CopyrightStyles = styled.div`
+  font-size: clamp(0.63rem, 0.52rem + 0.53vw, 0.75rem);
+  font-weight: 300;
+  opacity: 0.5;
+  padding: 6px 12px;
+  background-color: ${({ theme }) => theme?.palette?.secondary};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  ${({ theme }) => theme?.mediaQ.customDown(450)} {
+    margin-bottom: 74px;
+    padding: 0px 12px;
+  }
+  > p {
+    ${({ theme }) => theme?.mediaQ.customDown(450)} {
+      margin-right: 16px;
+    }
+  }
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100px;
+
+    > img {
+      height: 16px;
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+    }
+  }
+`;
 const CopyRight = () => {
   return (
     <CopyrightStyles>

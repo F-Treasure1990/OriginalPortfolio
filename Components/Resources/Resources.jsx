@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Toggle from "../Toggle/Toggle";
 
 import { Section_Divider, Section_SubTitle, Section_Title } from "../../styles/GlobalStyles";
 import { Resources_Container } from "./ResourcesStyles";

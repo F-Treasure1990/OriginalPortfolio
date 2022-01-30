@@ -2,7 +2,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import { useTheme } from "styled-components";
 import Arrow from "../../../icons/Arrow";
-import { LinkIcon } from "../../../icons/LinkIcon";
 import { Resources_TableContainer, Resources_TableTitle, Resource_Info } from "../ResourcesStyles";
 const container = {
   hidden: { height: 0, opacity: 0, marginTop: 0 },
@@ -13,7 +12,7 @@ const container = {
     transition: {
       staggerChildren: 0.1,
       type: "tween",
-      delayChildren: 0.1,
+      delayChildren: 0.15,
       height: { duration: 0.5 }
     }
   },
@@ -33,7 +32,7 @@ const item = {
   show: { opacity: 1, y: 0 },
   exit: { opacity: 0 }
 };
-const Resource_Option = ({ category }) => {
+const Resource_Option = ({ category, toggleAll }) => {
   const { palette } = useTheme();
   const [toggle, setToggle] = useState(false);
   return (
@@ -46,15 +45,12 @@ const Resource_Option = ({ category }) => {
         {toggle && (
           <motion.div variants={container} initial="hidden" animate="show" exit="exit">
             {category.resources.map((resource, i) => (
-              <Resource_Info variants={item}>
-                <motion.div href="www.google.com" className="title">
-                  {resource.title}
-                </motion.div>
-                <div className="description">{resource.description}</div>
-                <a href={resource.url} className="linkIcon">
-                  <LinkIcon d={24} />
-                </a>
-              </Resource_Info>
+              <a href={resource.url} className="urlLink">
+                <Resource_Info variants={item} key={`${resource.title}-${i}`}>
+                  <div className="title">{resource.title}</div>
+                  <div className="description">{resource.description}</div>
+                </Resource_Info>
+              </a>
             ))}
           </motion.div>
         )}

@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { Box } from "/styles/GlobalStyles";
 
 export const Container = styled(Box)`
-  margin-top: 50px;
+  margin-top: 60px;
+  margin-bottom: 50px;
   padding: clamp(0.75rem, -1rem + 4vw, 1.5rem);
   position: relative;
   width: auto;

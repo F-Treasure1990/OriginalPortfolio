@@ -8,6 +8,7 @@ export const Container = styled(Box)`
   overflow: hidden;
   transition: all 0.5s ease-out;
   z-index: 1000;
+  font-weight: 300;
   ${({ theme }) => theme?.mediaQ.customDown(450)} {
     position: fixed;
     bottom: 0;

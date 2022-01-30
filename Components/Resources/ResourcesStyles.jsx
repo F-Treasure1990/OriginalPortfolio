@@ -1,25 +1,32 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { Box, FlexCenter, Text } from "../../styles/GlobalStyles";
+import { Box, Button, FlexCenter, Text } from "../../styles/GlobalStyles";
 
-export const Resources_Container = styled.section``;
+export const Resources_Container = styled.section`
+  margin-bottom: 50px;
+`;
 
 export const Resources_TableContainer = styled.div`
   margin-bottom: 12px;
   overflow: hidden;
+  transition: margin ease;
 `;
 
 export const Resources_TableTitle = styled(Box)`
   background-color: ${({ theme }) => theme?.palette?.main};
   color: ${({ theme }) => theme?.palette?.textFocused};
-  /* font-weight: 300; */
-  font-size: 16px;
   padding: 12px 24px;
   display: flex;
   align-items: center;
   text-transform: capitalize;
+  transition: margin ease 0.3s;
   cursor: pointer;
   user-select: none;
+  font-size: clamp(0.88rem, 0.83rem + 0.24vw, 1rem);
+
+  ${({ theme }) => theme?.mediaQ.customDown(450)} {
+    margin: 0 12px;
+  }
 
   > svg {
     transform: ${({ toggle }) => (toggle ? "rotate(270deg)" : "rotate(90deg)")};
@@ -30,24 +37,41 @@ export const Resources_TableTitle = styled(Box)`
 
 export const Resource_Info = styled(motion.div)`
   display: grid;
-  grid-template-columns: 150px 1fr 40px;
+  grid-template-columns: 20% 1fr;
   grid-gap: 16px;
   padding: 12px;
   overflow: hidden;
+  transition: margin ease 0.3s;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-bottom: 1px solid ${({ theme }) => theme?.palette?.main};
 
-  :not(:last-child) {
-    border-bottom: 1px solid ${({ theme }) => theme?.palette?.main};
+  :hover {
+    border-bottom: 1px solid ${({ theme }) => theme?.palette?.accent};
+    .title {
+      color: ${({ theme }) => theme?.palette?.accent};
+    }
   }
+
+  ${({ theme }) => theme?.mediaQ.customDown(600)} {
+    grid-template-columns: 30% 1fr;
+  }
+  ${({ theme }) => theme?.mediaQ.customDown(450)} {
+    grid-template-columns: 37% 1fr;
+    margin: 0 12px;
+  }
+
   > .title {
     color: ${({ theme }) => theme?.palette?.textFocused};
     ${FlexCenter}
     font-weight: 300;
-
+    font-size: clamp(0.88rem, 0.83rem + 0.24vw, 1rem);
     text-transform: capitalize;
+    /* transition: color 0.3s ease; */
   }
 
   > .description {
-    font-size: 14px;
+    font-size: clamp(0.63rem, 0.53rem + 0.49vw, 0.88rem);
     font-weight: 300;
     color: ${({ theme }) => theme?.palette?.text};
   }
@@ -56,4 +80,8 @@ export const Resource_Info = styled(motion.div)`
     ${FlexCenter};
     cursor: pointer;
   }
+`;
+
+export const Resource_ToggleAll = styled(Button)`
+  position: absolute;
 `;

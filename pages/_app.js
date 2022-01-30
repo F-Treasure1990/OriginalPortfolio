@@ -6,10 +6,10 @@ import { GlobalReset } from "/styles/GlobalReset.jsx";
 import "../styles/Global.css";
 import MainNavbar from "../Components/MainNavbar/MainNavbar";
 import Footer from "../Components/Footer/Footer";
-import CopyRight from "../Components/Copyright/CopyRight";
 import { AnimatePresence, motion } from "framer-motion";
 import { QueryClient, QueryClientProvider } from "react-query";
 import QuoteSection from "../Components/QuoteSection/QuoteSection";
+import CopyRight from "../Components/Copyright/CopyRight";
 
 function App({ Component, pageProps, router }) {
   return (

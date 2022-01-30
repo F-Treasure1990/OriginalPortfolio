@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Section_Divider, Text, Button } from "../../styles/GlobalStyles";
 
 export const Footer_container = styled.section`
-  margin: 100px 0 50px;
+  margin-bottom: 50px;
   display: flex;
   padding: 12px 0 24px 0;
   background-image: url("landingBackground.svg");

@@ -1,31 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  isActive: 0
+  isActive: false,
+  projectCounter: 0
 };
 
 export const ToggleSlice = createSlice({
-  name: "counter",
+  name: "toggle",
   initialState,
   reducers: {
-    functionTester: (state, action) => (state.value = action.payload),
-    increment: state => {
-      // Redux Toolkit allows us to write "mutating" logic in reducers. It
-      // doesn't actually mutate the state because it uses the Immer library,
-      // which detects changes to a "draft state" and produces a brand new
-      // immutable state based off those changes
-      state.value += 1;
+    toggleContactForm: state => {
+      state.isActive = !state.isActive;
     },
-    decrement: state => {
-      state.value -= 1;
-    },
-    toggleByAmount: (state, action) => {
-      state.isActive = action.payload;
+
+    // used in projects section for projects nav and project display
+    toggleProjects: (state, action) => {
+      state.projectCounter = action.payload;
     }
   }
 });
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, toggleByAmount } = ToggleSlice.actions;
+export const { toggleProjects, toggleContactForm } = ToggleSlice.actions;
 
 export default ToggleSlice.reducer;

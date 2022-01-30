@@ -6,16 +6,19 @@ import { useTheme } from "styled-components";
 
 const MainNavbar = () => {
   const { palette } = useTheme();
+
   return (
     <Container h="64px" w="100%" percent>
       <Logo size="26" className="topnav_logo" color={palette?.textFocused} />
       <NavOptions />
-      <Message_Button solid>
-        <img className="icon" src="message.png" alt="Message Icon" />
-        <Text className="messageText" color="secondary" font="body2">
-          message
-        </Text>
-      </Message_Button>
+      <a href="mailto:fentontreasure@gmail.com">
+        <Message_Button solid>
+          <img className="icon" src="message.png" alt="Message Icon" />
+          <Text className="messageText" color="secondary" font="body2">
+            message
+          </Text>
+        </Message_Button>
+      </a>
     </Container>
   );
 };

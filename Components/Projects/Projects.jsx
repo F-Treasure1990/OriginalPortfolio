@@ -6,7 +6,7 @@ import Project_Nav from "./Project_Nav/Project_Nav";
 import projectsData from "/Data/projectsData.json";
 
 const ProjectsSection = () => {
-  const { isActive } = useSelector(state => state.ToggleSlice);
+  const { projectCounter: isActive } = useSelector(state => state.ToggleSlice);
   const { cards } = projectsData;
   const filteredArray = cards.slice(0, Math.floor(cards.length / 2));
   return (

@@ -16,7 +16,8 @@ export const FlexCenter = css`
 export const Button = styled.button`
   color: ${({ solid, theme }) => (solid ? theme?.palette?.secondary : theme?.palette?.accent)};
   background-color: ${({ solid, theme }) => (solid ? theme?.palette?.accent : "transparent")};
-  border: ${({ solid, theme }) => (solid ? "1px solid transparent" : `1px solid ${theme?.palette?.accent}`)};
+  border: ${({ solid, theme }) =>
+    solid ? "1px solid transparent" : `1px solid ${theme?.palette?.accent}`};
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -121,32 +122,5 @@ export const GithubLinkContainer = styled.a`
   & > svg {
     transition: all 0.3s ease;
     fill: ${({ theme }) => theme?.palette?.text};
-  }
-`;
-
-export const CopyrightStyles = styled.div`
-  font-size: 12px;
-  font-weight: 300;
-  opacity: 0.5;
-  padding: 6px 12px;
-  background-color: ${({ theme }) => theme?.palette?.secondary};
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 8px;
-  margin-bottom: 24px;
-
-  > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    > img {
-      height: 16px;
-      cursor: pointer;
-      &:not(:last-child) {
-        margin-right: 24px;
-      }
-    }
   }
 `;
