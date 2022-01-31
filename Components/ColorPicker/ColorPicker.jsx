@@ -34,6 +34,8 @@ const ColorPickerColor = styled(motion.div)`
   width: 18px;
   /* margin: 0 16px; */
   background-color: ${({ color }) => color};
+  overflow: hidden;
+  transform-origin: center center;
 `;
 
 export const ColorPicker = () => {
@@ -46,7 +48,6 @@ export const ColorPicker = () => {
         <ColorPickerColor
           key={`${color}-${i}`}
           color={color}
-          active={color === active}
           onClick={() => {
             setActive(color);
             dispatch(changeAccentColor(color));
@@ -59,8 +60,8 @@ export const ColorPicker = () => {
                   outlineOffset: "6px"
                 }
               : {
-                  outline: "none",
-                  outlineOffset: "none"
+                  outline: `0px solid ${color}`,
+                  outlineOffset: "0px"
                 }
           }
           initial={
@@ -73,6 +74,7 @@ export const ColorPicker = () => {
             outline: `3px solid ${color}`,
             outlineOffset: "6px"
           }}
+          transition={{ type: "spring" }}
         />
       ))}
     </ColorPicker_Container>

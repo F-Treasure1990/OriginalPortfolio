@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, get, getDefaultMiddleware } from "@reduxjs/toolkit";
 
 const initialState = {
   color: true,
@@ -11,12 +11,6 @@ const initialState = {
       text: "#f8f8f299",
       highlight: "#FF79C6",
       error: "#FF5555"
-    },
-    mediaQ: {
-      down,
-      up,
-      customDown: breakpoint => `@media screen and (max-width: ${breakpoint - 1}px)`,
-      customUp: breakpoint => `@media screen and (min-width: ${breakpoint}px)`
     },
     breakpoints: {
       xs: 0,
@@ -43,22 +37,20 @@ const initialState = {
     }
   }
 };
-function down(breakpoint) {
-  return `@media screen and (max-width: ${palette?.breakpoints?.[breakpoint] - 1}px)`;
-}
-function up(breakpoint) {
-  return `@media screen and (min-width: ${palette?.breakpoints?.[breakpoint]}px)`;
-}
 
 export const ThemeSlice = createSlice({
-  name: "theme",
+  name: "ThemeSlice",
   initialState,
   reducers: {
     // used in projects section for projects nav and project display
     changeAccentColor: (state, action) => {
       state.color = state.theme.palette.accent = action.payload;
     }
-  }
+  },
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
+      serializableCheck: false
+    })
 });
 
 // Action creators are generated for each case reducer function
