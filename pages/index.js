@@ -1,4 +1,3 @@
-import ContactForm from "../Components/ContactForm/ContactForm";
 import InfoSection from "../Components/InfoSection/InfoSection";
 
 export default function Home() {

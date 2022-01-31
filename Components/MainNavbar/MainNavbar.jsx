@@ -14,7 +14,7 @@ const MainNavbar = () => {
       <a href="mailto:fentontreasure@gmail.com">
         <Message_Button solid>
           <img className="icon" src="message.png" alt="Message Icon" />
-          <Text className="messageText" color="secondary" font="body2">
+          <Text className="messageText" color="secondary">
             message
           </Text>
         </Message_Button>

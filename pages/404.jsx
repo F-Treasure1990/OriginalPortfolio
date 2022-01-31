@@ -11,8 +11,8 @@ const Page404_Container = styled.div`
   ${FlexCenter};
   flex-direction: column;
   background-image: url("landingBackground.svg");
-  /* border: 1px solid ${({ theme }) => theme?.palette?.accent}; */
   border-radius: 12px;
+  margin-bottom: 40px;
 `;
 
 const Page404_Text = styled(Text)`
@@ -20,6 +20,7 @@ const Page404_Text = styled(Text)`
   text-transform: uppercase;
   letter-spacing: 1.6px;
   margin-top: 36px;
+  color: ${({ theme }) => theme?.palette?.error};
 `;
 
 const Page404_Button = styled(Button)`

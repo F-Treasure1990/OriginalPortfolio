@@ -23,7 +23,6 @@ export const Resources_TableTitle = styled(Box)`
   cursor: pointer;
   user-select: none;
   font-size: clamp(0.88rem, 0.83rem + 0.24vw, 1rem);
-
   ${({ theme }) => theme?.mediaQ.customDown(450)} {
     margin: 0 12px;
   }

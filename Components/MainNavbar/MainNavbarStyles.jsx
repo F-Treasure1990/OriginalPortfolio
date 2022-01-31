@@ -44,6 +44,7 @@ export const Message_Button = styled(Button)`
   }
   & > .messageText {
     transition: all 0.5s ease-out;
+    font-weight: 400;
     ${({ theme }) => theme?.mediaQ.customDown(750)} {
       margin-right: -94px;
       padding: 8px;

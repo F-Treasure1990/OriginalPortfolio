@@ -4,11 +4,13 @@ import Blog_Card from "./Blog_Card/Blog_Card";
 import blogData from "/Data/blogData.json";
 const Blog = () => {
   const { blogs } = blogData;
-  console.log(blogs);
+
   return (
     <>
       <Section_Title color="textFocused">blog</Section_Title>
-      <Section_SubTitle color="accent">Skills & Experience with an array of softwares </Section_SubTitle>
+      <Section_SubTitle color="accent">
+        Skills & Experience with an array of softwares{" "}
+      </Section_SubTitle>
       <Section_Divider />
       <Blog_CardsContainer>
         {blogs.slice(0, 3).map((b, i) => (
