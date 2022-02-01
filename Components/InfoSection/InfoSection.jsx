@@ -21,7 +21,7 @@ const InfoSection = () => {
       <TopSectionContainer>
         {/* Empty container to keep avatar centered within infobox */}
         {/* <EmptyContainer /> */}
-        <ColorPicker />
+        <ColorPicker infoSec={true} />
         <AvatarDP />
         <SocialMediaIcons />
       </TopSectionContainer>

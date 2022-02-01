@@ -3,7 +3,8 @@ import { FlexCenter } from "../../styles/GlobalStyles";
 
 export const QuoteContainer = styled.section`
   border-radius: 12px;
-  margin: 40px 0;
+  /* margin: 40px 0; */
+  margin-top: ${({ pathName }) => (pathName ? "40px" : "0px")};
   user-select: none;
   background-image: url("landingBackground.svg");
   /* padding: 12px; */
@@ -12,6 +13,10 @@ export const QuoteContainer = styled.section`
   flex-direction: column;
   height: 200px;
   max-height: 200px;
+  transition: margin ease 0.3s;
+  ${({ theme }) => theme?.mediaQ.customDown(450)} {
+    margin: 12px 0;
+  }
 `;
 
 export const Quote = styled.div`

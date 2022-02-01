@@ -31,9 +31,6 @@ export const MediaOption = styled.div`
 
   & > img {
     max-width: 40px;
-    transition: all ease-out 0.3s;
-    ${({ theme }) => theme?.mediaQ.customDown(700)} {
-      max-width: 20px;
-    }
+    transition: all ease 0.3s;
   }
 `;

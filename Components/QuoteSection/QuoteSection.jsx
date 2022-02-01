@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 import React from "react";
 import { useState } from "react";
 import { useQuery } from "react-query";
@@ -14,9 +15,10 @@ const v = {
 
 const QuoteSection = () => {
   const { data, isSuccess, isLoading, refetch } = useQuoteAPI();
+  const { pathname } = useRouter();
 
   return (
-    <QuoteContainer onClick={() => refetch()}>
+    <QuoteContainer onClick={() => refetch()} pathName={pathname === "/"}>
       <Quote>
         {isLoading && <Loader />}
         {isSuccess && (

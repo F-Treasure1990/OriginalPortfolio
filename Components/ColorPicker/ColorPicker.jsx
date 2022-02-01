@@ -1,62 +1,73 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import styled from "styled-components";
+import { useDispatch, useSelector } from "react-redux";
+import styled, { css } from "styled-components";
 import { changeAccentColor } from "../../Store/ThemeSlice";
 
-const ColorPicker_Container = styled.div`
+export const ColorPicker_Container = styled.div`
   display: flex;
   justify-content: space-between;
   width: max-content;
   cursor: pointer;
   flex-basis: 228px;
   padding: 0 12px;
-  margin-top: 16px;
+  margin-top: ${({ infoSec }) => (infoSec ? "16px" : "0px")};
   max-height: max-content;
   transition: margin ease 0.3s;
-  ${({ theme }) => theme?.mediaQ.customDown(700)} {
-    order: 3;
-    width: 50%;
-    flex-basis: max-content;
-    margin-top: 48px;
-  }
-  ${({ theme }) => theme?.mediaQ.customDown(450)} {
-    order: 3;
-    width: 80%;
-    flex-basis: max-content;
-    margin-top: 36px;
-  }
+  ${({ infoSec }) =>
+    infoSec &&
+    css`
+      ${({ theme }) => theme?.mediaQ.customDown(700)} {
+        order: 3;
+        width: 50%;
+        flex-basis: max-content;
+        margin-top: 48px;
+      }
+      ${({ theme }) => theme?.mediaQ.customDown(450)} {
+        order: 3;
+        width: 80%;
+        flex-basis: max-content;
+        margin-top: 36px;
+      }
+    `}
 `;
 
-const ColorPickerColor = styled(motion.div)`
+export const ColorPickerColor = styled(motion.div)`
   border-radius: 100%;
-  height: 18px;
-  width: 18px;
+  ${({ infoSec }) =>
+    infoSec
+      ? css`
+          height: 20px;
+          width: 20px;
+        `
+      : css`
+          height: 15px;
+          width: 15px;
+        `}
   /* margin: 0 16px; */
   background-color: ${({ color }) => color};
   overflow: hidden;
   transform-origin: center center;
 `;
 
-export const ColorPicker = () => {
+export const ColorPicker = ({ infoSec }) => {
+  const accentColor = useSelector(state => state.ThemeSlice.theme.palette.accent);
   const colors = ["#50FA7B", "#FFB86C", "#BD93F9", "#FF79C6", "#5dddfa"];
-  const [active, setActive] = useState("#BD93F9");
   const dispatch = useDispatch();
   return (
-    <ColorPicker_Container>
+    <ColorPicker_Container infoSec={infoSec}>
       {colors.map((color, i) => (
         <ColorPickerColor
           key={`${color}-${i}`}
           color={color}
           onClick={() => {
-            setActive(color);
             dispatch(changeAccentColor(color));
           }}
           animate={
-            color === active
+            color === accentColor
               ? {
                   opacity: 1,
-                  outline: `3px solid ${color}`,
+                  outline: `2px solid ${color}`,
                   outlineOffset: "6px"
                 }
               : {
@@ -65,13 +76,13 @@ export const ColorPicker = () => {
                 }
           }
           initial={
-            color === active && {
-              outline: `3px solid ${color}`,
+            color === accentColor && {
+              outline: `2px solid ${color}`,
               outlineOffset: "6px"
             }
           }
           whileHover={{
-            outline: `3px solid ${color}`,
+            outline: `2px solid ${color}`,
             outlineOffset: "6px"
           }}
           transition={{ type: "spring" }}

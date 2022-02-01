@@ -1,7 +1,7 @@
 import { createSlice, get, getDefaultMiddleware } from "@reduxjs/toolkit";
 
 const initialState = {
-  color: true,
+  // color: true,
   theme: {
     palette: {
       main: "#44475a",
