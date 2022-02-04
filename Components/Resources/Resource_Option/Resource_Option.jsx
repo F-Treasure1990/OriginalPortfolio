@@ -32,7 +32,7 @@ const item = {
   show: { opacity: 1, y: 0 },
   exit: { opacity: 0 }
 };
-const Resource_Option = ({ category, toggleAll }) => {
+const Resource_Option = ({ category }) => {
   const { palette } = useTheme();
   const [toggle, setToggle] = useState(false);
   return (
@@ -45,8 +45,13 @@ const Resource_Option = ({ category, toggleAll }) => {
         {toggle && (
           <motion.div variants={container} initial="hidden" animate="show" exit="exit">
             {category.resources.map((resource, i) => (
-              <a href={resource.url} className="urlLink">
-                <Resource_Info variants={item} key={`${resource.title}-${i}`}>
+              <a
+                href={resource.url}
+                className="urlLink"
+                target={"_blank"}
+                key={`${resource.title}-${i}`}
+              >
+                <Resource_Info variants={item}>
                   <div className="title">{resource.title}</div>
                   <div className="description">{resource.description}</div>
                 </Resource_Info>

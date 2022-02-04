@@ -51,6 +51,7 @@ export const NavOption = styled.a`
   position: relative;
   height: 80%;
   transition: all 0.3s ease-out;
+  font-weight: 400;
   ${FlexCenter}
   & > img {
     ${({ theme }) => theme?.mediaQ.customUp(700)} {

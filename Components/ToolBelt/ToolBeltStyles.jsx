@@ -1,11 +1,10 @@
-import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Box } from "../../styles/GlobalStyles";
 
 export const ToolBelt_Container = styled.section`
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   ${({ theme }) => theme?.mediaQ.customDown(450)} {
-    margin: 0 12px;
+    margin: 0 12px 24px 12px;
   }
 `;
 
@@ -27,7 +26,6 @@ export const ToolBelt_CategoriesContainer = styled.div`
 `;
 
 export const ToolBelt_OptionsContainer = styled(Box)`
-  /* display: flex; */
   padding: clamp(0.75rem, 0.12rem + 3.16vw, 1.5rem);
   margin: 0 auto;
   width: 90%;

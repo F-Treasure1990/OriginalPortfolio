@@ -3,7 +3,7 @@ import { Box } from "/styles/GlobalStyles";
 
 export const Container = styled(Box)`
   margin-top: 60px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   padding: clamp(0.75rem, -1rem + 4vw, 1.5rem);
   position: relative;
   width: auto;

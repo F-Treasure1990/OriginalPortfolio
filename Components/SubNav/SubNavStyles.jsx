@@ -9,8 +9,7 @@ export const SubNav_Container = styled(Box)`
   margin-bottom: 50px;
   height: 74px;
   width: auto;
-  /* box-shadow: none;
-  background-color: transparent; */
+  background-color: transparent;
 
   ${({ theme }) => theme?.mediaQ.customDown(600)} {
     height: auto;
@@ -36,12 +35,13 @@ export const SubNav_ColorPickerContainer = styled.div`
 `;
 
 export const SubNav_DP = styled.div`
-  min-height: clamp(6.25rem, 5.2rem + 5.26vw, 7.5rem);
+  height: clamp(6.25rem, 5.2rem + 5.26vw, 7.5rem);
+  /* min-width: clamp(6.25rem, 5.2rem + 5.26vw, 7.5rem); */
   padding: 6px;
   aspect-ratio: 1/1;
   border-radius: 50%;
   border: 2px solid ${({ theme }) => theme?.palette?.accent};
-  background: ${({ theme }) => theme?.palette?.main};
+  background: ${({ theme }) => theme?.palette?.secondary};
   margin: 0 20px;
   /* transition: all ease 0.3s; */
   ${({ theme }) => theme?.mediaQ.customDown(600)} {
@@ -67,16 +67,16 @@ export const SubNav_SocialMediaContainer = styled.div`
 export const SubNav_SocialMediaOption = styled.div`
   width: 50px;
   height: 42px;
-  border: 1px solid ${({ theme }) => theme?.palette?.accent};
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color ease 0.3s;
+  transition: background-color ease 0.3s, border ease 0.2s;
   ${FlexCenter}
   :nth-child(2) {
     margin: 0 6px;
   }
   &:hover {
-    background-color: ${({ theme }) => theme?.palette?.secondary};
+    border: 1px solid ${({ theme }) => theme?.palette?.accent};
+    /* background-color: ${({ theme }) => theme?.palette?.main}; */
   }
   & > img {
     max-width: 20px;

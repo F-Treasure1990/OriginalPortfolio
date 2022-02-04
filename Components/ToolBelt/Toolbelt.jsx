@@ -1,5 +1,11 @@
 import { Section_Divider, Section_SubTitle, Section_Title } from "../../styles/GlobalStyles";
-import { ToolBelt_Container, ToolBelt_Category, ToolBelt_SubContainer, ToolBelt_OptionsContainer, ToolBelt_CategoriesContainer } from "./ToolBeltStyles";
+import {
+  ToolBelt_Container,
+  ToolBelt_Category,
+  ToolBelt_SubContainer,
+  ToolBelt_OptionsContainer,
+  ToolBelt_CategoriesContainer
+} from "./ToolBeltStyles";
 import { Text } from "../../styles/GlobalStyles";
 import { useEffect, useRef, useState } from "react";
 import ToolBelt_Option from "./ToolBelt_Option/ToolBelt_Option";
@@ -22,22 +28,37 @@ const Toolbelt = () => {
   const { frontendTools } = frontend;
   const { backendTools } = backend;
   const { designTools } = design;
-  const [toolkitOption, setToolkitOption] = useState({ category: frontendTools, selected: "frontend" });
+  const [toolkitOption, setToolkitOption] = useState({
+    category: frontendTools,
+    selected: "frontend"
+  });
   return (
     <ToolBelt_Container>
       <Section_Title color="textFocused">toolbelt</Section_Title>
-      <Section_SubTitle color="accent">Skills & Experience with an array of softwares </Section_SubTitle>
+      <Section_SubTitle color="accent">an array of tools i have confidence in </Section_SubTitle>
       <Section_Divider />
       <ToolBelt_CategoriesContainer>
-        <ToolBelt_Category h="50px" className={toolkitOption.selected === "frontend" && "selected"} onClick={() => setToolkitOption({ category: frontendTools, selected: "frontend" })}>
+        <ToolBelt_Category
+          h="50px"
+          className={toolkitOption.selected === "frontend" && "selected"}
+          onClick={() => setToolkitOption({ category: frontendTools, selected: "frontend" })}
+        >
           <Text color="textFocused">Front-End</Text>
         </ToolBelt_Category>
 
-        <ToolBelt_Category h="50px" className={toolkitOption.selected === "backend" && "selected"} onClick={() => setToolkitOption({ category: backendTools, selected: "backend" })}>
+        <ToolBelt_Category
+          h="50px"
+          className={toolkitOption.selected === "backend" && "selected"}
+          onClick={() => setToolkitOption({ category: backendTools, selected: "backend" })}
+        >
           <Text color="textFocused">Back-End</Text>
         </ToolBelt_Category>
 
-        <ToolBelt_Category h="50px" className={toolkitOption.selected === "design" && "selected"} onClick={() => setToolkitOption({ category: designTools, selected: "design" })}>
+        <ToolBelt_Category
+          h="50px"
+          className={toolkitOption.selected === "design" && "selected"}
+          onClick={() => setToolkitOption({ category: designTools, selected: "design" })}
+        >
           <Text color="textFocused">Design / Utilities</Text>
         </ToolBelt_Category>
       </ToolBelt_CategoriesContainer>

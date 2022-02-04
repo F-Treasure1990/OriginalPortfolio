@@ -3,18 +3,16 @@ import { FlexCenter } from "../../styles/GlobalStyles";
 
 export const QuoteContainer = styled.section`
   border-radius: 12px;
-  /* margin: 40px 0; */
-  margin-top: ${({ pathName }) => (pathName ? "40px" : "0px")};
+  margin: 40px 0;
   user-select: none;
   background-image: url("landingBackground.svg");
-  /* padding: 12px; */
   cursor: pointer;
   ${FlexCenter}
   flex-direction: column;
   height: 200px;
   max-height: 200px;
   transition: margin ease 0.3s;
-  ${({ theme }) => theme?.mediaQ.customDown(450)} {
+  ${({ theme }) => theme?.mediaQ.customDown(600)} {
     margin: 12px 0;
   }
 `;

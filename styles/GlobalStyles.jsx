@@ -46,7 +46,8 @@ export const TextPara = styled.p`
 `;
 
 export const Section_Title = styled(Text)`
-  font-size: clamp(1.5rem, 1.29rem + 1.05vw, 1.75rem);
+  /* font-size: clamp(1.5rem, 1.29rem + 1.05vw, 1.75rem); */
+  font-size: clamp(1.5rem, 1.18rem + 1.58vw, 1.88rem);
   flex-basis: 100%;
   margin-bottom: 4px;
   text-transform: capitalize;
@@ -70,7 +71,6 @@ export const Section_SubTitle = styled(Text)`
   font-size: clamp(0.88rem, 0.77rem + 0.53vw, 1rem);
   font-weight: 300;
   text-transform: capitalize;
-
   text-align: center;
   ${({ theme }) => theme?.mediaQ.customDown(450)} {
     margin: 0px 12px;

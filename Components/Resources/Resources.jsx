@@ -10,7 +10,7 @@ const Resources = () => {
   return (
     <Resources_Container>
       <Section_Title color="textFocused">Resources</Section_Title>
-      <Section_SubTitle color="accent">useful resources i have used over time</Section_SubTitle>
+      <Section_SubTitle color="accent">useful resources i use most often</Section_SubTitle>
       <Section_Divider />
       {ResourceData.categories.map(category => (
         <Resource_Option category={category} />

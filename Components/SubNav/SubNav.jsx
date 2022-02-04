@@ -12,14 +12,14 @@ import {
 
 const SubNav = () => {
   const MediaOptions = ["instagram", "linkedin", "github"];
+  const DPs = ["fist_bump", "laptop", "smile", "thumbs_up", "wink", "pray"];
   return (
     <SubNav_Container>
       <SubNav_ColorPickerContainer>
         <ColorPicker useMargin={false} />
       </SubNav_ColorPickerContainer>
-
       <SubNav_DP>
-        <AvatarImg />
+        <AvatarImg src={`/DisplayPics/avatar_${DPs[Math.floor(Math.random() * DPs.length)]}.png`} />
       </SubNav_DP>
 
       <SubNav_SocialMediaContainer>

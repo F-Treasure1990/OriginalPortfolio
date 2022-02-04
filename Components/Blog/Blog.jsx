@@ -8,9 +8,7 @@ const Blog = () => {
   return (
     <>
       <Section_Title color="textFocused">blog</Section_Title>
-      <Section_SubTitle color="accent">
-        Skills & Experience with an array of softwares{" "}
-      </Section_SubTitle>
+      <Section_SubTitle color="accent">Insight into my journey</Section_SubTitle>
       <Section_Divider />
       <Blog_CardsContainer>
         {blogs.slice(0, 3).map((b, i) => (

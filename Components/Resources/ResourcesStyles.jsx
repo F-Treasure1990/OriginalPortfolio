@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Box, Button, FlexCenter, Text } from "../../styles/GlobalStyles";
 
 export const Resources_Container = styled.section`
-  margin-bottom: 50px;
+  /* margin-bottom: 20px; */
 `;
 
 export const Resources_TableContainer = styled.div`
@@ -66,6 +66,7 @@ export const Resource_Info = styled(motion.div)`
     font-weight: 300;
     font-size: clamp(0.88rem, 0.83rem + 0.24vw, 1rem);
     text-transform: capitalize;
+    text-align: center;
     /* transition: color 0.3s ease; */
   }
 

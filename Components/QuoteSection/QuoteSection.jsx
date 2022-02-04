@@ -1,10 +1,7 @@
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import React from "react";
-import { useState } from "react";
-import { useQuery } from "react-query";
 import useQuoteAPI from "../../Hooks/useQuoteAPI";
-import { Text } from "../../styles/GlobalStyles";
 import Loader from "../Loader/loader";
 import { Quote, QuoteContainer } from "./QuoteSectionStyles";
 

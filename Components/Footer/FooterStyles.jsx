@@ -8,6 +8,7 @@ export const Footer_container = styled.section`
   background-image: url("landingBackground.svg");
   flex-direction: column;
   align-items: center;
+  position: relative;
 `;
 
 export const Footer_LogoDividerContainer = styled.div`

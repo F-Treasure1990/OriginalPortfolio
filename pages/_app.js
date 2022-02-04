@@ -10,6 +10,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import QuoteSection from "../Components/QuoteSection/QuoteSection";
 import CopyRight from "../Components/Copyright/CopyRight";
 import { MediaQ } from "../styles/MediaQueries";
+import Head from "next/head";
 
 function App({ Component, pageProps, router }) {
   return (
@@ -23,24 +24,30 @@ const queryClient = new QueryClient();
 
 function Content({ Component, pageProps, router }) {
   const Theme = useSelector(state => state.ThemeSlice.theme);
-
   return (
-    <ThemeProvider theme={MediaQ}>
-      <ThemeProvider theme={Theme}>
-        <GlobalReset />
-        <MainNavbar />
-        <QueryClientProvider client={queryClient}>
-          <QuoteSection />
-        </QueryClientProvider>
-        <AnimatePresence exitBeforeEnter>
-          <motion.div key={router.route} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-            <Component {...pageProps} />
-          </motion.div>
-        </AnimatePresence>
-        <Footer />
-        <CopyRight />
+    <>
+      <Head>
+        <title> Fenton Treasure | Portfolio</title>
+        <link rel="shortcut icon" type="image/png" href="FavIcon.png"></link>
+      </Head>
+      <ThemeProvider theme={MediaQ}>
+        <ThemeProvider theme={Theme}>
+          <GlobalReset />
+          <MainNavbar />
+          <QueryClientProvider client={queryClient}>
+            <QuoteSection />
+          </QueryClientProvider>
+
+          <AnimatePresence exitBeforeEnter>
+            <motion.div key={router.route} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              <Component {...pageProps} />
+            </motion.div>
+          </AnimatePresence>
+          <Footer />
+          <CopyRight />
+        </ThemeProvider>
       </ThemeProvider>
-    </ThemeProvider>
+    </>
   );
 }
 

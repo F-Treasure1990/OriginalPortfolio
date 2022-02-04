@@ -13,6 +13,7 @@ export const Project_CardTitle = styled(Text)`
   font-size: clamp(1rem, 0.79rem + 1.05vw, 1.25rem);
   letter-spacing: 0.8px;
   line-height: 26px;
+  max-height: 320px;
 `;
 
 export const Project_CardSubTitle = styled(Text)`

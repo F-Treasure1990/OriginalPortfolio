@@ -5,6 +5,7 @@ import { Text } from "../../../styles/GlobalStyles";
 export const ToolBelt_OptionContainer = styled(motion.div)`
   display: flex;
   width: 100%;
+
   &:not(:last-child) {
     border-bottom: 1px solid ${({ theme }) => theme?.palette?.secondary};
   }
