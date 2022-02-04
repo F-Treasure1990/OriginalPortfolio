@@ -7,7 +7,7 @@ const ScrollTopBtn = () => {
   return (
     <svg width="30" height="30" viewBox="0 0 30 30">
       <defs>
-        <clipPath id="clip-path">
+        <clipPath>
           <rect
             id="Rectangle_699"
             data-name="Rectangle 699"
@@ -28,12 +28,7 @@ const ScrollTopBtn = () => {
           fill={accent}
         />
         <motion.g id="Group_620" data-name="Group 620" transform="translate(20 -178.999)">
-          <g
-            id="Group_619"
-            data-name="Group 619"
-            transform="translate(0 0)"
-            clip-path="url(#clip-path)"
-          >
+          <g id="Group_619" data-name="Group 619" transform="translate(0 0)">
             <path
               id="Path_2116"
               data-name="Path 2116"
