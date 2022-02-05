@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import React from "react";
 import useQuoteAPI from "../../Hooks/useQuoteAPI";
-import Loader from "../Loader/loader";
+import Loader from "../Loader/Loader";
 import { Quote, QuoteContainer } from "./QuoteSectionStyles";
 
 const v = {
