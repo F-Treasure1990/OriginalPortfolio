@@ -31,7 +31,7 @@ const NavOptions = () => {
   return (
     <NavOptionsContainer>
       {NavOptions.map((option, index) => (
-        <Link href={option === "home" ? "/" : `/${option}`} key={`${option}-${index}`}>
+        <Link href={option === "home" ? "/" : `/${option}`} key={`${option}-${index}`} passHref>
           <NavOptionContainer
             key={`${option}-${index}`}
             onClick={() => setClicked(option)}

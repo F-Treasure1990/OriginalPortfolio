@@ -17,7 +17,7 @@ const ToolBelt_Option = ({ tool }) => {
   return (
     <ToolBelt_OptionContainer variants={v}>
       <ToolBelt_OptionImgContainer>
-        <img src={`Toolbelt/${tool?.software.replace(/ /g, "-")}-logo.png`} alt="react-logo" />
+        <img src={`/ToolBelt/${tool?.software.replace(/ /g, "-")}-logo.png`} alt={tool?.software} />
       </ToolBelt_OptionImgContainer>
       {/* Title and Percentage bar */}
       <ToolBelt_OptionRightSideContainer>
@@ -26,9 +26,9 @@ const ToolBelt_Option = ({ tool }) => {
         <div className="confidenceBarPercentageCon">
           <ToolBelt_OptionConfidenceBar>
             <motion.div
-              initial={{ width: "0" }}
+              initial={{ width: 0 }}
               animate={{ width: `${tool?.confidence}%` }}
-              transition={{ type: "spring", duration: 1.5, bounce: 0.3 }}
+              transition={{ type: "tween", duration: 1 }}
               className="confidenceBarPercentage"
             />
           </ToolBelt_OptionConfidenceBar>

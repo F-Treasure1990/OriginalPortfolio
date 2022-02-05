@@ -1,7 +1,18 @@
 import { AvatarImg, AvatarRing } from "./AvatarDPStyles";
 
 const AvatarDP = () => {
-  const DPs = ["fist_bump", "laptop", "smile", "thumbs_up", "wink", "pray"];
+  const DPs = [
+    "fist_bump",
+    "laptop",
+    "tongue",
+    "smile",
+    "fingerscrossed",
+    "meditating",
+    "thumbs_up",
+    "peace",
+    "wink",
+    "pray"
+  ];
 
   return (
     <>

@@ -39,7 +39,12 @@ function Content({ Component, pageProps, router }) {
           </QueryClientProvider>
 
           <AnimatePresence exitBeforeEnter>
-            <motion.div key={router.route} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <motion.div
+              key={router.route}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
               <Component {...pageProps} />
             </motion.div>
           </AnimatePresence>

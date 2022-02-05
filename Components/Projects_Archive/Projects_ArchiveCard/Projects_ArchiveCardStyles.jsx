@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { Box, Text } from "../../../styles/GlobalStyles";
-
+import { Box, FlexCenter, Text } from "../../../styles/GlobalStyles";
+import { motion } from "framer-motion";
 export const Projects_ArchiveCardContainer = styled(Box)`
   padding: 16px;
   cursor: pointer;
   transition: all ease-out 0.3s;
   border: solid 1px ${({ theme }) => theme?.palette?.secondary};
-
+  position: relative;
   &:hover {
     border: solid 1px ${({ theme }) => theme?.palette?.accent};
   }

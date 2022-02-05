@@ -49,6 +49,7 @@ const Resource_Option = ({ category }) => {
                 href={resource.url}
                 className="urlLink"
                 target={"_blank"}
+                rel="noreferrer"
                 key={`${resource.title}-${i}`}
               >
                 <Resource_Info variants={item}>

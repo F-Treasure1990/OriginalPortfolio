@@ -24,7 +24,7 @@ const QuoteSection = () => {
               ~ {data?.author} ~
             </motion.div>
             <motion.div className="quote" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-              "{data?.content.split(".")}"
+              &quot;{data?.content?.split(".")}&quot;
             </motion.div>
           </>
         )}

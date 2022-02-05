@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 import Spaceship from "../icons/Spaceship";
@@ -42,7 +43,9 @@ const Custom404 = () => {
     <Page404_Container>
       <Spaceship />
       <Page404_Text color="textFocused">page not found</Page404_Text>
-      <Page404_Button>Go Home</Page404_Button>
+      <Link href="/">
+        <Page404_Button>Go Home</Page404_Button>
+      </Link>
     </Page404_Container>
   );
 };

@@ -12,10 +12,10 @@ import ToolBelt_Option from "./ToolBelt_Option/ToolBelt_Option";
 import frontend from "/Data/Toolbelt/front-end.json";
 import backend from "/Data/Toolbelt/back-end.json";
 import design from "/Data/Toolbelt/utilities";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const v = {
-  hidden: { opacity: 1 },
+  hidden: { opacity: 0 },
   show: {
     opacity: 1,
     transition: {
@@ -32,6 +32,7 @@ const Toolbelt = () => {
     category: frontendTools,
     selected: "frontend"
   });
+
   return (
     <ToolBelt_Container>
       <Section_Title color="textFocused">toolbelt</Section_Title>

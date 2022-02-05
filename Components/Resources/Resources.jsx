@@ -13,7 +13,7 @@ const Resources = () => {
       <Section_SubTitle color="accent">useful resources i use most often</Section_SubTitle>
       <Section_Divider />
       {ResourceData.categories.map(category => (
-        <Resource_Option category={category} />
+        <Resource_Option category={category} key={category} />
       ))}
     </Resources_Container>
   );

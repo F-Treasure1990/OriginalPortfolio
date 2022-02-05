@@ -42,9 +42,9 @@ const CopyRight = () => {
     <CopyrightStyles>
       <Text color="text">© 2020-present Fenton Treasure. All Rights Reserved.</Text>
       <div>
-        <img src="instagram.png" />
-        <img src="linkedin.png" />
-        <img src="github.png" />
+        <img src="instagram.png" alt="instagram" />
+        <img src="linkedin.png" alt="linkedin" />
+        <img src="github.png" alt="github" />
       </div>
     </CopyrightStyles>
   );

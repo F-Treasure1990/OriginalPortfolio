@@ -5,14 +5,33 @@ import {
   SubNav_ColorPickerContainer,
   SubNav_Container,
   SubNav_DP,
-  SubNav_DPContainer,
   SubNav_SocialMediaContainer,
   SubNav_SocialMediaOption
 } from "./SubNavStyles";
 
 const SubNav = () => {
   const MediaOptions = ["instagram", "linkedin", "github"];
-  const DPs = ["fist_bump", "laptop", "smile", "thumbs_up", "wink", "pray"];
+  const DPs = [
+    "fist_bump",
+    "laptop",
+    "tongue",
+    "smile",
+    "fingerscrossed",
+    "meditating",
+    "thumbs_up",
+    "peace",
+    "wink",
+    "pray"
+  ];
+  const mediaURl = media => {
+    if (media === "instagram") {
+      return "https://www.instagram.com/";
+    } else if (media === "linkedin") {
+      return "https://gb.linkedin.com/";
+    } else if (media === "github") {
+      return "https://github.com/F-Treasure1990";
+    }
+  };
   return (
     <SubNav_Container>
       <SubNav_ColorPickerContainer>
@@ -24,9 +43,11 @@ const SubNav = () => {
 
       <SubNav_SocialMediaContainer>
         {MediaOptions.map((icon, index) => (
-          <SubNav_SocialMediaOption key={`${icon}=${index}`}>
-            <img src={`${icon}.png`} alt={`${icon}`} />
-          </SubNav_SocialMediaOption>
+          <a href={mediaURl(icon)} target="_blank">
+            <SubNav_SocialMediaOption key={`${icon}=${index}`}>
+              <img src={`${icon}.png`} alt={`${icon}`} />
+            </SubNav_SocialMediaOption>
+          </a>
         ))}
       </SubNav_SocialMediaContainer>
     </SubNav_Container>

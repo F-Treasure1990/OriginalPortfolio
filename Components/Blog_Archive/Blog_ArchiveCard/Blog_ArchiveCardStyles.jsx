@@ -6,6 +6,7 @@ export const Blog_ArchiveCardContainer = styled(Box)`
   cursor: pointer;
   transition: all ease-out 0.3s;
   border: solid 1px ${({ theme }) => theme?.palette?.secondary};
+  position: relative;
 
   &:hover {
     border: solid 1px ${({ theme }) => theme?.palette?.accent};
