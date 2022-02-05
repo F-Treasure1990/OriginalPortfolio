@@ -16,8 +16,8 @@ const SocialMediaIcons = () => {
     <>
       <Container>
         {MediaOptions.map((icon, index) => (
-          <a href={mediaURl(icon)} target="_blank">
-            <MediaOption key={`${icon}=${index}`}>
+          <a href={mediaURl(icon)} target="_blank" rel="noreferrer" key={`${icon}=${index}`}>
+            <MediaOption>
               <img src={`${icon}.png`} alt={`${icon}`} />
             </MediaOption>
           </a>

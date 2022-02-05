@@ -43,8 +43,8 @@ const SubNav = () => {
 
       <SubNav_SocialMediaContainer>
         {MediaOptions.map((icon, index) => (
-          <a href={mediaURl(icon)} target="_blank">
-            <SubNav_SocialMediaOption key={`${icon}=${index}`}>
+          <a href={mediaURl(icon)} target="_blank" rel="noreferrer" key={`${icon}=${index}`}>
+            <SubNav_SocialMediaOption>
               <img src={`${icon}.png`} alt={`${icon}`} />
             </SubNav_SocialMediaOption>
           </a>
