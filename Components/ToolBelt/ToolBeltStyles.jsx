@@ -12,10 +12,13 @@ export const ToolBelt_CategoriesContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(0.5rem, 0.08rem + 2.11vw, 1rem);
-  transition: all ease 0.3s;
+
   margin-bottom: 40px;
   & .selected {
-    outline: 1px solid ${({ theme }) => theme?.palette?.accent};
+    /* outline: 1px solid; */
+    outline-color: ${({ theme }) => theme?.palette?.accent};
+    outline-style: solid;
+    outline-width: 2px;
     /* outline-offset: 2px; */
     font-weight: 400;
     background: transparent;

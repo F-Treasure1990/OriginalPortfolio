@@ -85,7 +85,7 @@ export const ColorPicker = ({ infoSec }) => {
             outline: `2px solid ${color}`,
             outlineOffset: "6px"
           }}
-          transition={{ type: "spring" }}
+          transition={{ type: "tween" }}
         />
       ))}
     </ColorPicker_Container>
