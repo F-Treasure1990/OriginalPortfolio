@@ -19,7 +19,7 @@ export const ToolBelt_CategoriesContainer = styled.div`
     outline-color: ${({ theme }) => theme?.palette?.accent};
     outline-style: solid;
     outline-width: 2px;
-    /* outline-offset: 2px; */
+    border-radius: 6px;
     font-weight: 400;
     background: transparent;
     & > p {
