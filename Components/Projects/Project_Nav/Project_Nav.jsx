@@ -25,7 +25,7 @@ const Project_Nav = ({ filteredArray }) => {
           }}
         >
           <Arrow d={8} c={palette?.accent} />
-          <Label color={isActive === 0 ? "text" : "textFocused"}>back</Label>
+          <Label color={isActive === 0 ? "textUnFocused" : "textFocused"}>back</Label>
         </LeftSideContainer>
 
         <CenterContainer>
@@ -43,7 +43,9 @@ const Project_Nav = ({ filteredArray }) => {
             );
           }}
         >
-          <Label color={isActive === filteredArray.length - 1 ? "text" : "textFocused"}>next</Label>
+          <Label color={isActive === filteredArray.length - 1 ? "textUnFocused" : "textFocused"}>
+            next
+          </Label>
           <Arrow d={8} c={palette?.accent} />
         </RightSideContainer>
       </Project_NavContainer>

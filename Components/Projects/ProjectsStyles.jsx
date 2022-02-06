@@ -7,6 +7,9 @@ export const Projects_Container = styled.section`
   ${({ theme }) => theme?.mediaQ.customDown(450)} {
     margin: clamp(0rem, -1.85rem + 9.23vw, 0.75rem);
   }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const Projects_CardsContainer = styled.section`

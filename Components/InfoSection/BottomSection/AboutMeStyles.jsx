@@ -21,6 +21,7 @@ export const Description = styled(motion.div)`
     color: ${({ theme }) => theme?.palette?.accent};
   }
   ${({ theme }) => theme?.mediaQ.customUp(750)} {
+    text-align: center;
     height: max-content !important;
     margin-bottom: 12px;
   }

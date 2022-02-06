@@ -61,6 +61,13 @@ export const SubNav_SocialMediaContainer = styled.div`
     width: 100%;
     justify-content: center;
     margin: 24px 0;
+    > a {
+      ${({ theme }) => theme?.mediaQ.customDown(600)} {
+        :nth-child(2) {
+          margin: 0 24px;
+        }
+
+    }
   }
 `;
 
@@ -81,9 +88,5 @@ export const SubNav_SocialMediaOption = styled.div`
   & > img {
     max-width: 20px;
   }
-  ${({ theme }) => theme?.mediaQ.customDown(600)} {
-    :nth-child(2) {
-      margin: 0 24px;
-    }
   }
 `;

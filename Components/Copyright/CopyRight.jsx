@@ -14,7 +14,7 @@ const CopyrightStyles = styled.div`
   border-radius: 8px;
   margin-bottom: 24px;
   ${({ theme }) => theme?.mediaQ.customDown(450)} {
-    margin-bottom: 74px;
+    margin-bottom: 150px;
     padding: 0px 12px;
   }
   > p {

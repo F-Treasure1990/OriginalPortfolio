@@ -8,6 +8,7 @@ const initialState = {
       secondary: "#282A36",
       accent: "#BD93F9",
       textFocused: "#F8F8F2",
+      textUnFocused: "#f8f8f833",
       text: "#f8f8f299",
       highlight: "#FF79C6",
       error: "#FF5555"

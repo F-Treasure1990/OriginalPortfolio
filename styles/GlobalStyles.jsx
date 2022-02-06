@@ -85,7 +85,7 @@ export const Archive_SubTitle = styled(Section_Title)`
   text-align: start;
 `;
 export const Section_Divider = styled.div`
-  height: 1px;
+  min-height: 1px;
   background-color: ${({ theme }) => theme?.palette?.main};
   flex-basis: 100%;
   margin-top: clamp(0.75rem, 0.12rem + 3.16vw, 1.5rem);

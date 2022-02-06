@@ -15,12 +15,11 @@ const ProjectsSection = () => {
         <Section_Title color="textFocused">Projects</Section_Title>
         <Section_SubTitle color="accent">here are some projects I have developed</Section_SubTitle>
         <Section_Divider />
+        <Project_Nav filteredArray={filteredArray} />
         <Projects_CardsContainer>
           <Project_Card card={cards[isActive === 0 ? 0 : isActive + isActive]} />
           <Project_Card card={cards[isActive === 0 ? 0 + 1 : isActive + (isActive + 1)]} />
         </Projects_CardsContainer>
-
-        <Project_Nav filteredArray={filteredArray} />
       </Projects_Container>
     </>
   );

@@ -14,14 +14,9 @@ import AboutMe from "./BottomSection/AboutMe";
 const InfoSection = () => {
   return (
     <Container>
-      {/* <MsgButton solid>
-        <Text color="secondary">message</Text>
-      </MsgButton> */}
       {/* TOP SECTION */}
       <TopSectionContainer>
-        {/* Empty container to keep avatar centered within infobox */}
-        {/* <EmptyContainer /> */}
-        <ColorPicker infosec={true} />
+        <ColorPicker infosec={"true"} />
         <AvatarDP />
         <SocialMediaIcons />
       </TopSectionContainer>

@@ -6,7 +6,8 @@ export const Project_NavContainer = styled(Box)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: clamp(1rem, 0.58rem + 2.11vw, 1.5rem) auto 0 auto;
+  margin: 0 auto clamp(1rem, 0.58rem + 2.11vw, 2rem) auto;
+
   padding: 0 clamp(0.75rem, 0.4rem + 1.76vw, 1.5rem);
   width: clamp(18.75rem, 12.87rem + 29.41vw, 31.25rem);
   & svg {
@@ -47,7 +48,8 @@ export const Dot = styled.div`
   height: 8px;
   width: 8px;
   border-radius: 10px;
-  background-color: ${({ theme, active }) => (active ? theme?.palette?.accent : theme?.palette?.secondary)};
+  background-color: ${({ theme, active }) =>
+    active ? theme?.palette?.accent : theme?.palette?.secondary};
   margin: 0px clamp(0.25rem, 0.13rem + 0.59vw, 0.5rem);
   transform: scale(${({ active }) => active && "1.3"});
   transition: transform ease 0.4s;
