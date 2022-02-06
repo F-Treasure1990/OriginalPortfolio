@@ -53,9 +53,9 @@ export const ColorPickerColor = styled.div`
 `;
 
 export const ColorPickerColor_Center = styled(motion.div)`
-  height: 60%;
+  height: ${({ theme, infosec }) => (infosec ? "16px" : "14px")};
   aspect-ratio: 1/1;
-  border-radius: 50%;
+  border-radius: 100%;
   background-color: ${({ theme, infosec }) =>
     infosec ? theme?.palette?.main : theme?.palette?.secondary};
 `;

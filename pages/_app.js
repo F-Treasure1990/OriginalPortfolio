@@ -52,26 +52,3 @@ function Content({ Component, pageProps, router }) {
 }
 
 export default App;
-
-// function Content({ Component, pageProps, router }) {
-//   const accentColor = useSelector(state => state.AccentColorSlice.color);
-
-//   return (
-//     <ThemeProvider theme={accentColor ? customTheme : customTheme2}>
-//       <GlobalReset />
-//       <MainNavbar />
-//       <QueryClientProvider client={queryClient}>
-//         <QuoteSection />
-//       </QueryClientProvider>
-//       <AnimatePresence exitBeforeEnter>
-//         <motion.div key={router.route} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-//           <Component {...pageProps} />
-//         </motion.div>
-//       </AnimatePresence>
-//       <Footer />
-//       <CopyRight />
-//     </ThemeProvider>
-//   );
-// }
-
-// export default App;

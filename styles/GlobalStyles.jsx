@@ -17,7 +17,7 @@ export const Button = styled.button`
   color: ${({ solid, theme }) => (solid ? theme?.palette?.secondary : theme?.palette?.accent)};
   background-color: ${({ solid, theme }) => (solid ? theme?.palette?.accent : "transparent")};
   border: ${({ solid, theme }) =>
-    solid ? "1px solid transparent" : `1px solid ${theme?.palette?.accent}`};
+    solid ? "2px solid transparent" : `2px solid ${theme?.palette?.accent}`};
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;

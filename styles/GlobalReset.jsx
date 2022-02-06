@@ -33,6 +33,7 @@ html {
   5. Improve text rendering
 */
 body {
+  background-color: #282A36;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family:'CascadiaCode' ;

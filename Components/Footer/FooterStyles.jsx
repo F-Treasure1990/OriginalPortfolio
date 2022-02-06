@@ -68,7 +68,7 @@ export const Footer_Button = styled(Button)`
   }
 
   &:hover {
-    border: 1px solid ${({ theme }) => theme?.palette?.secondary};
+    border: 2px solid ${({ theme }) => theme?.palette?.secondary};
     color: ${({ theme }) => theme?.palette?.secondary};
     background-color: ${({ theme }) => theme?.palette?.accent};
   }
