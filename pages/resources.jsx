@@ -6,7 +6,7 @@ const ResourcesSection = () => {
   return (
     <>
       <SubNav />
-      <Resources />;
+      <Resources />
     </>
   );
 };

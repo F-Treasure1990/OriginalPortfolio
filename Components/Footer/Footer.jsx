@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+
 import { useTheme } from "styled-components";
 import Logo from "../../icons/Logo";
 import { Section_Divider } from "../../styles/GlobalStyles";
@@ -15,7 +15,7 @@ import {
 
 const Footer = () => {
   const { palette } = useTheme();
-  const dispatch = useDispatch();
+
   return (
     <>
       <ScrollBtn />
@@ -28,7 +28,7 @@ const Footer = () => {
           <Section_Divider />
         </Footer_LogoDividerContainer>
         <Footer_TextContainer>
-          <Footer_Title color="accent">get in touch!</Footer_Title>
+          <Footer_Title>get in touch!</Footer_Title>
           <Footer_Description color="textFocused">
             My aim is to connect with the developer community and explore any opportunities that
             comes with that. Please don’t hesitate to message me and ill try my best to get back to

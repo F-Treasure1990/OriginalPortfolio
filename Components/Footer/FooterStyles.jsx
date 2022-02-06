@@ -42,6 +42,8 @@ export const Footer_Title = styled(Text)`
   text-transform: capitalize;
   font-size: clamp(1.5rem, 1.29rem + 1.05vw, 1.75rem);
   margin-top: 16px;
+  color: ${({ theme }) => theme?.palette?.accent};
+  transition: all ease 0.3s;
 `;
 
 export const Footer_Description = styled(Text)`

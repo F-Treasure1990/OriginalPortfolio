@@ -11,7 +11,7 @@ export const Container = styled.section`
   ${({ theme }) => theme?.mediaQ.customDown(700)} {
     width: 100%;
     margin-top: 24px;
-    flex-basis: max-content;
+    flex-basis: 100%;
     justify-content: center;
   }
 `;
@@ -19,10 +19,10 @@ export const Container = styled.section`
 export const MediaOption = styled.div`
   min-width: clamp(3.38rem, 0.75rem + 6vw, 3.75rem);
   height: clamp(2.88rem, 0.25rem + 6vw, 3.25rem);
-  border: 1px solid ${({ theme }) => theme?.palette?.accent};
+  border: 2px solid ${({ theme }) => theme?.palette?.accent};
   border-radius: 8px;
   margin: 0 3%;
-  transition: all 0.3s ease-out;
+  transition: all 0.3s ease;
   ${FlexCenter}
   cursor: pointer;
   &:hover {
@@ -32,5 +32,8 @@ export const MediaOption = styled.div`
   & > img {
     max-width: 40px;
     transition: all ease 0.3s;
+  }
+  ${({ theme }) => theme?.mediaQ.customDown(700)} {
+    margin: 0 clamp(0.38rem, 0.23rem + 0.73vw, 0.75rem);
   }
 `;

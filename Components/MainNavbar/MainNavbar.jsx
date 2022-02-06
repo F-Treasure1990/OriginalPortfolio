@@ -10,13 +10,14 @@ const MainNavbar = () => {
   return (
     <Container h="64px" w="100%" percent>
       <Logo size="26" className="topnav_logo" color={palette?.textFocused} />
+
       <NavOptions />
       <a href="mailto:fentontreasure@gmail.com">
         <Message_Button solid>
-          <img className="icon" src="message.png" alt="Message Icon" />
-          <Text className="messageText" color="secondary">
+          <img className="icon" src="message.svg" alt="Message Icon" />
+          {/* <Text className="messageText" color="secondary">
             message
-          </Text>
+          </Text> */}
         </Message_Button>
       </a>
     </Container>

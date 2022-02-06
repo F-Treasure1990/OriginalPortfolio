@@ -13,11 +13,11 @@ export const Title = styled(Text)`
 export const Description = styled(motion.div)`
   color: ${({ theme }) => theme?.palette?.textFocused};
   font-weight: 300;
-  transition: all ease;
   overflow: hidden;
   text-overflow: ellipsis;
 
-  & > span {
+  > span {
+    transition: all ease 0.3s;
     color: ${({ theme }) => theme?.palette?.accent};
   }
   ${({ theme }) => theme?.mediaQ.customUp(750)} {

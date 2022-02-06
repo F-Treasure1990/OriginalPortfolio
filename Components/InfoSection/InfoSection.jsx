@@ -8,7 +8,7 @@ import {
   TopSectionContainer
 } from "./InfoSectionStyles";
 import SocialMediaIcons from "./TopSection/SocialMediaIcons/SocialMediaIcons";
-import Credentials from "./MiddleSection/Credientials/Credentials";
+import Credentials from "./MiddleSection/Credentials/Credentials";
 import AboutMe from "./BottomSection/AboutMe";
 
 const InfoSection = () => {
@@ -21,7 +21,7 @@ const InfoSection = () => {
       <TopSectionContainer>
         {/* Empty container to keep avatar centered within infobox */}
         {/* <EmptyContainer /> */}
-        <ColorPicker infoSec={true} />
+        <ColorPicker infosec={true} />
         <AvatarDP />
         <SocialMediaIcons />
       </TopSectionContainer>

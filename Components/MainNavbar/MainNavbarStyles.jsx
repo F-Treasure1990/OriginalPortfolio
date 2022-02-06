@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FlexCenter } from "../../styles/GlobalStyles";
 import { Box, Button } from "/styles/GlobalStyles";
 
 export const Container = styled(Box)`
@@ -12,7 +13,6 @@ export const Container = styled(Box)`
   ${({ theme }) => theme?.mediaQ.customDown(450)} {
     position: fixed;
     bottom: 0;
-
     outline: 10px solid ${({ theme }) => theme?.palette?.secondary};
     border-radius: 0;
   }
@@ -20,19 +20,22 @@ export const Container = styled(Box)`
   // LOGO
   & > svg {
     margin-left: max(2.4%, 12px);
+    margin-right: 12px;
     transition: all 0.6s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     ${({ theme }) => theme?.mediaQ.customDown(500)} {
       margin-left: -34px;
     }
 
-    :hover {
+    /* :hover {
       transform: rotate(180deg);
-    }
+    } */
   }
 `;
 
 export const Message_Button = styled(Button)`
-  padding: 8px 16px;
+  ${FlexCenter}
+
+  min-width: 50px;
   border-radius: 6px;
   height: 40px;
   overflow: hidden;
@@ -40,9 +43,9 @@ export const Message_Button = styled(Button)`
   font-size: 14px;
   transition: all 0.5s ease-out;
   ${({ theme }) => theme?.mediaQ.customDown(450)} {
-    margin-right: -6ch;
+    display: none;
   }
-  & > .messageText {
+  /* & > .messageText {
     transition: all 0.5s ease-out;
     font-weight: 400;
     ${({ theme }) => theme?.mediaQ.customDown(750)} {
@@ -53,5 +56,5 @@ export const Message_Button = styled(Button)`
   & > .icon {
     min-width: 16px;
     min-height: 16px;
-  }
+  } */
 `;

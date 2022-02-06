@@ -72,6 +72,7 @@ export const ToolBelt_OptionConfidenceBar = styled.div`
 
   & .confidenceBarPercentage {
     background-color: ${({ theme }) => theme?.palette?.accent};
+    transition: background-color ease 0.3s;
   }
 `;
 

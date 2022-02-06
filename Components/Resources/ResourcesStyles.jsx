@@ -30,7 +30,8 @@ export const Resources_TableTitle = styled(Box)`
   > svg {
     transform: ${({ toggle }) => (toggle ? "rotate(270deg)" : "rotate(90deg)")};
     margin-right: 16px;
-    transition: all ease-out 0.5s;
+    transition: transform ease-out 0.5s, stroke ease 0.3s;
+    stroke: ${({ theme }) => theme?.palette?.accent};
   }
 `;
 

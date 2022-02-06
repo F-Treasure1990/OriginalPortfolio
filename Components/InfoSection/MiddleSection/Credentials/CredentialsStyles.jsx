@@ -30,6 +30,10 @@ export const EmploymentStatus = styled(Text)`
   ${FlexbaisTextCenter}
   font-size: clamp(0.88rem, 0.7rem + 0.88vw, 1.25rem);
   font-weight: 300;
+  > * {
+    transition: all ease 0.3s;
+  }
+
   & span:nth-child(1) {
     color: ${({ theme }) => theme?.palette?.highlight};
   }

@@ -13,6 +13,12 @@
       "url": "https://www.prisma.io/"
     },
     {
+      "software": "graphQL",
+      "confidence": 75,
+      "description": "GraphQL is an open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data",
+      "url": "https://graphql.org/"
+    },
+    {
       "software": "mongoDB",
       "confidence": 80,
       "description": "MongoDB is a source-available cross-platform document-oriented database program.",
@@ -35,12 +41,6 @@
       "confidence": 75,
       "description": "MySQL is an open-source relational database management system. Prisma negates the need to use SQL",
       "url": "https://www.mysql.com/"
-    },
-    {
-      "software": "graphQl",
-      "confidence": 75,
-      "description": "GraphQL is an open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data",
-      "url": "https://graphql.org/"
     }
   ]
 }

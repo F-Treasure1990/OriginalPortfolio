@@ -66,9 +66,11 @@ const Toolbelt = () => {
       {/* Options */}
       <ToolBelt_OptionsContainer>
         <motion.div variants={v} animate="show" initial="hidden">
-          {toolkitOption.category.map((t, i) => (
-            <ToolBelt_Option tool={t} key={`${t}-${i}`} />
-          ))}
+          <AnimatePresence layout>
+            {toolkitOption.category.map((t, i) => (
+              <ToolBelt_Option tool={t} key={`${t}-${i}`} layoutId={`${t}-${i}`} />
+            ))}
+          </AnimatePresence>
         </motion.div>
       </ToolBelt_OptionsContainer>
     </ToolBelt_Container>

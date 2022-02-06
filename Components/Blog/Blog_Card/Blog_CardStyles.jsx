@@ -42,6 +42,7 @@ export const Blog_CardDate = styled(Text)`
   font-size: clamp(0.75rem, 0.64rem + 0.53vw, 0.88rem);
   margin-bottom: 4px;
   font-weight: 300;
+  transition: color ease 0.3s;
 `;
 
 export const Blog_CardDescription = styled(Text)`

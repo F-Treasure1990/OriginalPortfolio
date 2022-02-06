@@ -36,6 +36,7 @@ export const Box = styled.div`
 
 export const Text = styled.p`
   color: ${({ theme, color }) => theme?.palette?.[color] ?? "red"};
+  transition: color ease 0.3s;
   /* font-size: ${({ theme, font }) => theme?.typography?.[font]?.fontSize ?? "16"}px; */
   /* font-weight: ${({ theme, font }) => theme?.typography?.[font]?.fontWeight ?? "400"}; */
 `;

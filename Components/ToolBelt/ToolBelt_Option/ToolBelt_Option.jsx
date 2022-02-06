@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Text } from "../../../styles/GlobalStyles";
 import {
   ToolBelt_OptionConfidenceBar,
@@ -17,7 +18,7 @@ const ToolBelt_Option = ({ tool }) => {
   return (
     <ToolBelt_OptionContainer variants={v}>
       <ToolBelt_OptionImgContainer>
-        <img src={`/ToolBelt/${tool?.software.replace(/ /g, "-")}-logo.png`} alt={tool?.software} />
+        <img src={`/ToolBelt/${tool?.software.replace(/ /g, "-")}-logo.svg`} alt={tool?.software} />
       </ToolBelt_OptionImgContainer>
       {/* Title and Percentage bar */}
       <ToolBelt_OptionRightSideContainer>

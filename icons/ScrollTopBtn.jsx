@@ -19,6 +19,7 @@ const ScrollTopBtn = () => {
       </defs>
       <g id="Group_621" data-name="Group 621" transform="translate(-12 187)">
         <rect
+          style={{ transition: "all ease 0.3s" }}
           id="Rectangle_700"
           data-name="Rectangle 700"
           width="30"

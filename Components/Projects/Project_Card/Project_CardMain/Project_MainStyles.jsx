@@ -22,6 +22,8 @@ export const Project_CardSubTitle = styled(Text)`
   letter-spacing: 0.8px;
   margin: 4px 0;
   font-weight: 300;
+  color: ${({ theme }) => theme?.palette?.accent};
+  transition: colo ease 0.3s;
 `;
 
 export const Project_DescriptionContainer = styled.div`

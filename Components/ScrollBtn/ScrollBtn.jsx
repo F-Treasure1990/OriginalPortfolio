@@ -14,6 +14,7 @@ const ScrollBtnContainer = styled(motion.div)`
   transition: box-shadow 0.3s ease, margin 0.3s ease;
   padding: 12px;
   overflow: hidden;
+
   ${({ theme }) => theme?.mediaQ.customDown(450)} {
     margin-right: 12px;
   }

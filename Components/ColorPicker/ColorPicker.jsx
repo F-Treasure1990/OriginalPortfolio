@@ -3,19 +3,21 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled, { css } from "styled-components";
 import { changeAccentColor } from "../../Store/ThemeSlice";
+import { FlexCenter } from "../../styles/GlobalStyles";
 
 export const ColorPicker_Container = styled.div`
+  height: max-content;
   display: flex;
   justify-content: space-between;
   width: max-content;
   cursor: pointer;
   flex-basis: 228px;
   padding: 0 12px;
-  margin-top: ${({ infoSec }) => (infoSec ? "16px" : "0px")};
+  margin-top: ${({ infosec }) => (infosec ? "16px" : "0px")};
   max-height: max-content;
   transition: margin ease 0.3s;
-  ${({ infoSec }) =>
-    infoSec &&
+  ${({ infosec }) =>
+    infosec &&
     css`
       ${({ theme }) => theme?.mediaQ.customDown(700)} {
         order: 3;
@@ -32,61 +34,55 @@ export const ColorPicker_Container = styled.div`
     `}
 `;
 
-export const ColorPickerColor = styled(motion.div)`
+export const ColorPickerColor = styled.div`
   border-radius: 100%;
-  ${({ infoSec }) =>
-    infoSec
-      ? css`
-          height: 20px;
-          width: 20px;
-        `
-      : css`
-          height: 15px;
-          width: 15px;
-        `}
-  /* margin: 0 16px; */
   background-color: ${({ color }) => color};
   overflow: hidden;
+  ${FlexCenter}
   transform-origin: center center;
+  ${({ infosec }) =>
+    infosec
+      ? css`
+          height: 24px;
+          width: 24px;
+        `
+      : css`
+          height: 20px;
+          width: 20px;
+        `}
 `;
 
-export const ColorPicker = ({ infoSec }) => {
+export const ColorPickerColor_Center = styled(motion.div)`
+  height: 60%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: ${({ theme, infosec }) =>
+    infosec ? theme?.palette?.main : theme?.palette?.secondary};
+`;
+
+export const ColorPicker = ({ infosec }) => {
   const accentColor = useSelector(state => state.ThemeSlice.theme.palette.accent);
   const colors = ["#50FA7B", "#FFB86C", "#BD93F9", "#FF79C6", "#5dddfa"];
   const dispatch = useDispatch();
+  // console.log(accentColor);
+
   return (
-    <ColorPicker_Container infoSec={infoSec}>
+    <ColorPicker_Container infosec={infosec}>
       {colors.map((color, i) => (
         <ColorPickerColor
+          infosec={infosec}
           key={`${color}-${i}`}
           color={color}
           onClick={() => {
             dispatch(changeAccentColor(color));
           }}
-          animate={
-            color === accentColor
-              ? {
-                  opacity: 1,
-                  outline: `2px solid ${color}`,
-                  outlineOffset: "6px"
-                }
-              : {
-                  outline: `0px solid ${color}`,
-                  outlineOffset: "0px"
-                }
-          }
-          initial={
-            color === accentColor && {
-              outline: `2px solid ${color}`,
-              outlineOffset: "6px"
-            }
-          }
-          whileHover={{
-            outline: `2px solid ${color}`,
-            outlineOffset: "6px"
-          }}
-          transition={{ type: "tween" }}
-        />
+        >
+          <ColorPickerColor_Center
+            infosec={infosec}
+            initial={{ scale: 0 }}
+            animate={color === accentColor ? { scale: 0 } : { scale: 1 }}
+          />
+        </ColorPickerColor>
       ))}
     </ColorPicker_Container>
   );

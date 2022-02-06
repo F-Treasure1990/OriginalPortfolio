@@ -9,13 +9,9 @@ export const NavOptionsContainer = styled("div")`
   justify-content: center;
   align-items: center;
   transition: all ease-out 0.3s;
-  /* margin: 0 6%; */
 
   ${({ theme }) => theme?.mediaQ.customDown(700)} {
-    margin: 0 6%;
-  }
-  ${({ theme }) => theme?.mediaQ.customDown(450)} {
-    margin: 0 4%;
+    margin: 0 clamp(0.75rem, -3.31rem + 13vw, 2.38rem);
   }
 `;
 

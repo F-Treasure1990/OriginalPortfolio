@@ -75,7 +75,7 @@ export const SubNav_SocialMediaOption = styled.div`
     margin: 0 6px;
   }
   &:hover {
-    border: 1px solid ${({ theme }) => theme?.palette?.accent};
+    border: 2px solid ${({ theme }) => theme?.palette?.accent};
     /* background-color: ${({ theme }) => theme?.palette?.main}; */
   }
   & > img {
