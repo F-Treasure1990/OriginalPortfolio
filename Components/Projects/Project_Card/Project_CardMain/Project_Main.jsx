@@ -3,8 +3,7 @@ import {
   Project_DescriptionContainer,
   Project_CardMainContainer,
   Project_CardSubTitle,
-  Project_CardTitle,
-  Project_ViewProjectBtn
+  Project_CardTitle
 } from "./Project_MainStyles";
 
 const Project_Main = ({ card }) => {

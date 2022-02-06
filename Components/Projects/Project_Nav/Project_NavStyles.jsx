@@ -3,13 +3,17 @@ import { FlexCenter } from "/styles/GlobalStyles";
 import { Box, Text } from "/styles/GlobalStyles.jsx";
 
 export const Project_NavContainer = styled(Box)`
+  grid-column: 1/-1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto clamp(1rem, 0.58rem + 2.11vw, 2rem) auto;
+  margin: 8px auto;
 
   padding: 0 clamp(0.75rem, 0.4rem + 1.76vw, 1.5rem);
   width: clamp(18.75rem, 12.87rem + 29.41vw, 31.25rem);
+  ${({ theme }) => theme?.mediaQ.customDown(662)} {
+    grid-row: 2/3;
+  }
   & svg {
     ${({ theme }) => theme?.mediaQ.customDown(450)} {
       display: none;

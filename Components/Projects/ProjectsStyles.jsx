@@ -15,6 +15,7 @@ export const Projects_Container = styled.section`
 export const Projects_CardsContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
   gap: clamp(1rem, 0.88rem + 0.59vw, 1.25rem);
 
   ${({ theme }) => theme?.mediaQ.customDown(700)} {

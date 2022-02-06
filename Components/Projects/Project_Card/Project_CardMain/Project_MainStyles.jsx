@@ -10,6 +10,7 @@ export const Project_CardMainContainer = styled.section`
 
 export const Project_CardTitle = styled(Text)`
   text-transform: capitalize;
+
   font-size: clamp(1rem, 0.79rem + 1.05vw, 1.25rem);
   letter-spacing: 0.8px;
   line-height: 26px;

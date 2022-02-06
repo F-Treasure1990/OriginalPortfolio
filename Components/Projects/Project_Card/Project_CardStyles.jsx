@@ -11,4 +11,13 @@ export const Project_CardContainer = styled(Box)`
   &:hover .Project_CardImg {
     transform: scale(1.2);
   }
+  ${({ theme }) => theme?.mediaQ.customDown(662)} {
+    min-height: 400px;
+  }
+  ${({ theme }) => theme?.mediaQ.customDown(662)} {
+    min-height: 410px;
+  }
+  ${({ theme }) => theme?.mediaQ.customDown(450)} {
+    min-height: 299px;
+  }
 `;

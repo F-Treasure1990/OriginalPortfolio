@@ -37,7 +37,6 @@ function Content({ Component, pageProps, router }) {
           <QueryClientProvider client={queryClient}>
             <QuoteSection />
           </QueryClientProvider>
-
           <AnimatePresence exitBeforeEnter>
             <motion.div key={router.route} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
               <Component {...pageProps} />
