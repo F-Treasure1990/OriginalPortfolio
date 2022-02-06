@@ -15,10 +15,7 @@ export const ToolBelt_CategoriesContainer = styled.div`
 
   margin-bottom: 40px;
   & .selected {
-    /* outline: 1px solid; */
-    outline-color: ${({ theme }) => theme?.palette?.accent};
-    outline-style: solid;
-    outline-width: 2px;
+    border: 2px solid ${({ theme }) => theme?.palette?.accent};
 
     font-weight: 400;
     background: transparent;
