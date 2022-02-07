@@ -1,6 +1,4 @@
 import { motion } from "framer-motion";
-import { useRouter } from "next/router";
-import React, { useState, useEffect, useRef } from "react";
 
 import styled from "styled-components";
 
@@ -11,9 +9,6 @@ export const AvatarImgStyles = styled(motion.img)`
 `;
 
 const AvatarImg = () => {
-  // const router = useRouter();
-
-  // const [display, setDisplay] = useState("/DisplayPics/avatar_smile.png");
   const DPs = [
     "fist_bump",
     "laptop",
@@ -27,13 +22,13 @@ const AvatarImg = () => {
     "pray"
   ];
 
-  // useEffect(() => {
-  //   if (router.pathname !== "/")
-  //     setDisplay(`/DisplayPics/avatar_${DPs[Math.floor(Math.random() * DPs.length)]}.png`);
-  // }, [router.pathname]);
   return (
     <AvatarImgStyles
       src={`/DisplayPics/avatar_${DPs[Math.floor(Math.random() * DPs.length)]}.png`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+      loading="eager"
     />
   );
 };
