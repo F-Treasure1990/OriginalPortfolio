@@ -34,14 +34,13 @@ function Content({ Component, pageProps, router }) {
         <ThemeProvider theme={Theme}>
           <GlobalReset />
           <MainNavbar />
+
           <QueryClientProvider client={queryClient}>
             <QuoteSection />
           </QueryClientProvider>
-          <AnimatePresence exitBeforeEnter>
-            <motion.div key={router.route} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-              <Component {...pageProps} />
-            </motion.div>
-          </AnimatePresence>
+
+          <Component {...pageProps} />
+
           <Footer />
           <CopyRight />
         </ThemeProvider>

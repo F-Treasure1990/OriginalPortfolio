@@ -1,6 +1,7 @@
 {
   "name": "portfolio-final",
   "private": true,
+  "homepage": "/pages/index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
