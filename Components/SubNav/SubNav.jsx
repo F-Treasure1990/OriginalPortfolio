@@ -1,6 +1,6 @@
+import AvatarImg from "../AvatarImg/AvatarImg";
 import { ColorPicker } from "../ColorPicker/ColorPicker";
-import { AvatarImg } from "../InfoSection/TopSection/AvatarDP/AvatarDPStyles";
-import { MediaOption } from "../InfoSection/TopSection/SocialMediaIcons/SocailMediaIconsStyles";
+
 import {
   SubNav_ColorPickerContainer,
   SubNav_Container,
@@ -11,18 +11,7 @@ import {
 
 const SubNav = () => {
   const MediaOptions = ["instagram", "linkedin", "github"];
-  const DPs = [
-    "fist_bump",
-    "laptop",
-    "tongue",
-    "smile",
-    "fingerscrossed",
-    "meditating",
-    "thumbs_up",
-    "peace",
-    "wink",
-    "pray"
-  ];
+
   const mediaURl = media => {
     if (media === "instagram") {
       return "https://www.instagram.com/";
@@ -38,7 +27,7 @@ const SubNav = () => {
         <ColorPicker useMargin={false} />
       </SubNav_ColorPickerContainer>
       <SubNav_DP>
-        <AvatarImg src={`/DisplayPics/avatar_${DPs[Math.floor(Math.random() * DPs.length)]}.png`} />
+        <AvatarImg />
       </SubNav_DP>
 
       <SubNav_SocialMediaContainer>

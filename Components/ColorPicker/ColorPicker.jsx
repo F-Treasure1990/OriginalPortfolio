@@ -79,7 +79,7 @@ export const ColorPicker = ({ infosec }) => {
         >
           <ColorPickerColor_Center
             infosec={infosec}
-            initial={{ scale: 0 }}
+            initial={color === accentColor ? { scale: 0 } : { scale: 1 }}
             animate={color === accentColor ? { scale: 0 } : { scale: 1 }}
           />
         </ColorPickerColor>

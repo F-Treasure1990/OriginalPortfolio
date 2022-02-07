@@ -1,4 +1,4 @@
-import { createSlice, get, getDefaultMiddleware } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   // color: true,

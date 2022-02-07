@@ -15,8 +15,8 @@ export const AvatarRing = styled.div`
   transition: all ease 0.3s;
 `;
 
-export const AvatarImg = styled(motion.img)`
-  height: 100%;
-  width: 100%;
-  border-radius: 100%;
-`;
+// export const AvatarImg = styled(motion.img)`
+//   height: 100%;
+//   width: 100%;
+//   border-radius: 100%;
+// `;

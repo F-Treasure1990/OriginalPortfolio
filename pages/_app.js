@@ -11,40 +11,31 @@ import QuoteSection from "../Components/QuoteSection/QuoteSection";
 import CopyRight from "../Components/Copyright/CopyRight";
 import { MediaQ } from "../styles/MediaQueries";
 import Head from "next/head";
-
-function App({ Component, pageProps, router }) {
-  return (
-    <Provider store={store}>
-      <Content Component={Component} pageProps={pageProps} router={router} />
-    </Provider>
-  );
-}
+import ThemeMaster from "../Components/ThemeMaster";
 
 const queryClient = new QueryClient();
 
-function Content({ Component, pageProps, router }) {
-  const Theme = useSelector(state => state.ThemeSlice.theme);
+function App({ Component, pageProps }) {
   return (
     <>
       <Head>
         <title> Fenton Treasure | Portfolio</title>
         <link rel="shortcut icon" type="image/png" href="FavIcon.png"></link>
       </Head>
-      <ThemeProvider theme={MediaQ}>
-        <ThemeProvider theme={Theme}>
-          <GlobalReset />
-          <MainNavbar />
-
-          <QueryClientProvider client={queryClient}>
-            <QuoteSection />
-          </QueryClientProvider>
-
-          <Component {...pageProps} />
-
-          <Footer />
-          <CopyRight />
+      <Provider store={store}>
+        <ThemeProvider theme={MediaQ}>
+          <ThemeMaster>
+            <GlobalReset />
+            <MainNavbar />
+            <QueryClientProvider client={queryClient}>
+              <QuoteSection />
+            </QueryClientProvider>
+            <Component {...pageProps} />
+            <Footer />
+            <CopyRight />
+          </ThemeMaster>
         </ThemeProvider>
-      </ThemeProvider>
+      </Provider>
     </>
   );
 }
