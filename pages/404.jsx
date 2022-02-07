@@ -43,7 +43,7 @@ const Custom404 = () => {
     <Page404_Container>
       <Spaceship />
       <Page404_Text color="textFocused">page not found</Page404_Text>
-      <Link href="/">
+      <Link href="/" passHref>
         <Page404_Button>Go Home</Page404_Button>
       </Link>
     </Page404_Container>

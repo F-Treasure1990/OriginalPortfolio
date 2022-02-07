@@ -3,7 +3,7 @@ import { Text } from "/styles/GlobalStyles";
 
 export const Project_CardMainContainer = styled.section`
   padding: clamp(0.75rem, 0.12rem + 3.16vw, 1.5rem);
-  border-top: 1px solid ${({ theme }) => theme?.palette?.accent};
+  border-top: 2px solid ${({ theme }) => theme?.palette?.accent};
   display: flex;
   flex-direction: column;
 `;

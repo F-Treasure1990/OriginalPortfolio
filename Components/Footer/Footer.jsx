@@ -31,8 +31,8 @@ const Footer = () => {
           <Footer_Title>get in touch!</Footer_Title>
           <Footer_Description color="textFocused">
             My aim is to connect with the developer community and explore any opportunities that
-            comes with that. Please don’t hesitate to message me and ill try my best to get back to
-            you ASAP 👊🏽
+            comes with that. Please do not hesitate to message me and I will try my best to get back
+            to you ASAP 👊🏽
           </Footer_Description>
           <a href="mailto:fentontreasure@gmail.com">
             <Footer_Button>message</Footer_Button>
