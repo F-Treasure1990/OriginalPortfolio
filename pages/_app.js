@@ -1,11 +1,10 @@
 import { store } from "../Store/store";
 import { ThemeProvider } from "styled-components";
-import { Provider, useDispatch, useSelector } from "react-redux";
+import { Provider } from "react-redux";
 import { GlobalReset } from "/styles/GlobalReset.jsx";
 import "../styles/Global.css";
 import MainNavbar from "../Components/MainNavbar/MainNavbar";
 import Footer from "../Components/Footer/Footer";
-import { AnimatePresence, motion } from "framer-motion";
 import { QueryClient, QueryClientProvider } from "react-query";
 import QuoteSection from "../Components/QuoteSection/QuoteSection";
 import CopyRight from "../Components/Copyright/CopyRight";

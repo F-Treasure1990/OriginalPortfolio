@@ -7,6 +7,7 @@ export const Container = styled(Box)`
   padding: clamp(0.75rem, -1rem + 4vw, 1.5rem);
   position: relative;
   width: auto;
+  min-height: 584px;
   ${({ theme }) => theme?.mediaQ.customDown(450)} {
     margin-left: 12px;
     margin-right: 12px;
