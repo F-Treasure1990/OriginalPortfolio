@@ -8,6 +8,8 @@ const Project_TopSection = ({ card }) => {
         src={card?.img}
         alt="Project image"
         loading="eager"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
       />
     </Project_CardTopContainer>
   );

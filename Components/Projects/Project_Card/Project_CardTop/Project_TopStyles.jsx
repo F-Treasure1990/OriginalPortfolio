@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const Project_CardTopContainer = styled.section`
@@ -6,7 +7,7 @@ export const Project_CardTopContainer = styled.section`
   height: clamp(11.25rem, 10.2rem + 5.26vw, 12.5rem);
 `;
 
-export const Project_CardImg = styled.img`
+export const Project_CardImg = styled(motion.img)`
   height: 100%;
   width: 100%;
   opacity: 0.8;

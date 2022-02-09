@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Box, Text } from "../../../styles/GlobalStyles";
 
@@ -15,7 +16,7 @@ export const Blog_CardContainer = styled(Box)`
   }
 `;
 
-export const Blog_CardImg = styled.img`
+export const Blog_CardImg = styled(motion.img)`
   min-width: 240px;
   object-fit: cover;
 

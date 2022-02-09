@@ -23,7 +23,7 @@ const AvatarImg = () => {
     "pray"
   ];
 
-  return <AvatarImgStyles src={`/DisplayPics/avatar_smile.png`} />;
+  return <AvatarImgStyles loading="eager" src={`/DisplayPics/avatar_smile.png`} />;
 };
 
 export default AvatarImg;

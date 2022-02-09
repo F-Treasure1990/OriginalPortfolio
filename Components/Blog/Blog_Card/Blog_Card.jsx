@@ -21,7 +21,11 @@ const Blog_Card = ({ blog }) => {
   return (
     <Blog_CardContainer w="100%" h="auto" onClick={underConstruction}>
       {displayConstruction && <UnderConstructionArchive size={"120px"} />}
-      <Blog_CardImg src="Projects/project-5.png" />
+      <Blog_CardImg
+        src="Projects/project-5.png"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      />
       <Blog_CardTextContainer>
         <Blog_CardTitle color="textFocused">{blog.title}</Blog_CardTitle>
         <Blog_CardDate color="accent">{blog.postDate}</Blog_CardDate>
